@@ -6,30 +6,25 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C684DDA32CAD65970053B291 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C684DD9B2CAD65970053B291 /* Assets.xcassets */; };
+		C684DDA52CAD65970053B291 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C684DD9E2CAD65970053B291 /* LaunchScreen.storyboard */; };
+		C684DDA62CAD65970053B291 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C684DDA02CAD65970053B291 /* Main.storyboard */; };
+		C684DDB62CAD665D0053B291 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C684DDB42CAD665D0053B291 /* AppDelegate.swift */; };
+		C684DDB72CAD665D0053B291 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C684DDB52CAD665D0053B291 /* SceneDelegate.swift */; };
+		C684DDBC2CAD668F0053B291 /* LogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C684DDBB2CAD668F0053B291 /* LogInVC.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
-		C684DD4B2CAD641F0053B291 /* Mola.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mola.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C684DD9B2CAD65970053B291 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C684DD9C2CAD65970053B291 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C684DD9D2CAD65970053B291 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C684DD9F2CAD65970053B291 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C684DDB32CAD665D0053B291 /* Mola.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mola.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C684DDB42CAD665D0053B291 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C684DDB52CAD665D0053B291 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C684DDBB2CAD668F0053B291 /* LogInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		C684DD5D2CAD64210053B291 /* Exceptions for "Mola" folder in "Mola" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = C684DD4A2CAD641F0053B291 /* Mola */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		C684DD4D2CAD641F0053B291 /* Mola */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				C684DD5D2CAD64210053B291 /* Exceptions for "Mola" folder in "Mola" target */,
-			);
-			path = Mola;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C684DD482CAD641F0053B291 /* Frameworks */ = {
@@ -45,17 +40,79 @@
 		C684DD422CAD641F0053B291 = {
 			isa = PBXGroup;
 			children = (
-				C684DD4D2CAD641F0053B291 /* Mola */,
-				C684DD4C2CAD641F0053B291 /* Products */,
+				C684DDA22CAD65970053B291 /* Mola */,
 			);
 			sourceTree = "<group>";
 		};
-		C684DD4C2CAD641F0053B291 /* Products */ = {
+		C684DDA22CAD65970053B291 /* Mola */ = {
 			isa = PBXGroup;
 			children = (
-				C684DD4B2CAD641F0053B291 /* Mola.app */,
+				C684DDBE2CAD66E10053B291 /* System */,
+				C684DDBF2CAD66FA0053B291 /* UI */,
+				C684DDC12CAD67080053B291 /* Cells */,
+				C684DDC22CAD671A0053B291 /* ViewControllers */,
+				C684DDC32CAD67230053B291 /* Entity */,
+				C684DDC42CAD67340053B291 /* Animation */,
+				C684DDA02CAD65970053B291 /* Main.storyboard */,
+				C684DD9B2CAD65970053B291 /* Assets.xcassets */,
+				C684DD9E2CAD65970053B291 /* LaunchScreen.storyboard */,
+				C684DD9C2CAD65970053B291 /* Info.plist */,
 			);
-			name = Products;
+			path = Mola;
+			sourceTree = "<group>";
+		};
+		C684DDBE2CAD66E10053B291 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				C684DDB32CAD665D0053B291 /* Mola.app */,
+				C684DDB42CAD665D0053B291 /* AppDelegate.swift */,
+				C684DDB52CAD665D0053B291 /* SceneDelegate.swift */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		C684DDBF2CAD66FA0053B291 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C684DDC02CAD67020053B291 /* ViewModels */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		C684DDC02CAD67020053B291 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C684DDC12CAD67080053B291 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		C684DDC22CAD671A0053B291 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C684DDBB2CAD668F0053B291 /* LogInVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C684DDC32CAD67230053B291 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		C684DDC42CAD67340053B291 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Animation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -73,14 +130,11 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				C684DD4D2CAD641F0053B291 /* Mola */,
-			);
 			name = Mola;
 			packageProductDependencies = (
 			);
 			productName = Mola;
-			productReference = C684DD4B2CAD641F0053B291 /* Mola.app */;
+			productReference = C684DDB32CAD665D0053B291 /* Mola.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -108,7 +162,7 @@
 			mainGroup = C684DD422CAD641F0053B291;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = C684DD4C2CAD641F0053B291 /* Products */;
+			productRefGroup = C684DD422CAD641F0053B291;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -122,6 +176,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C684DDA32CAD65970053B291 /* Assets.xcassets in Resources */,
+				C684DDA52CAD65970053B291 /* LaunchScreen.storyboard in Resources */,
+				C684DDA62CAD65970053B291 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,10 +189,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C684DDBC2CAD668F0053B291 /* LogInVC.swift in Sources */,
+				C684DDB62CAD665D0053B291 /* AppDelegate.swift in Sources */,
+				C684DDB72CAD665D0053B291 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C684DD9E2CAD65970053B291 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C684DD9D2CAD65970053B291 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C684DDA02CAD65970053B291 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C684DD9F2CAD65970053B291 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C684DD5F2CAD64210053B291 /* Debug */ = {

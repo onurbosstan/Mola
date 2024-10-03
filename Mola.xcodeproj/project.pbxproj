@@ -19,6 +19,9 @@
 		C684DDCD2CAEA62D0053B291 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = C684DDCC2CAEA62D0053B291 /* FirebaseDatabase */; };
 		C684DDCF2CAEA62D0053B291 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C684DDCE2CAEA62D0053B291 /* FirebaseFirestore */; };
 		C684DDD12CAEA62D0053B291 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = C684DDD02CAEA62D0053B291 /* FirebaseStorage */; };
+		C684DDD72CAEDF140053B291 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C684DDD62CAEDF140053B291 /* ForgotPasswordVC.swift */; };
+		C684DDDA2CAEE0060053B291 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C684DDD92CAEE0060053B291 /* RegisterVC.swift */; };
+		C6E12A282CAEE16D0066FA48 /* UserProcesses.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E12A272CAEE16D0066FA48 /* UserProcesses.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 		C684DDB52CAD665D0053B291 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C684DDBB2CAD668F0053B291 /* LogInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInVC.swift; sourceTree = "<group>"; };
 		C684DDC52CAEA5C00053B291 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C684DDD62CAEDF140053B291 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
+		C684DDD92CAEE0060053B291 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		C6E12A272CAEE16D0066FA48 /* UserProcesses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProcesses.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +115,7 @@
 		C684DDC22CAD671A0053B291 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				C684DDBB2CAD668F0053B291 /* LogInVC.swift */,
+				C684DDD82CAEDFE70053B291 /* UserProcesses */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -117,6 +123,7 @@
 		C684DDC32CAD67230053B291 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				C6E12A262CAEE15F0066FA48 /* UsersEntity */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -126,6 +133,24 @@
 			children = (
 			);
 			path = Animation;
+			sourceTree = "<group>";
+		};
+		C684DDD82CAEDFE70053B291 /* UserProcesses */ = {
+			isa = PBXGroup;
+			children = (
+				C684DDBB2CAD668F0053B291 /* LogInVC.swift */,
+				C684DDD62CAEDF140053B291 /* ForgotPasswordVC.swift */,
+				C684DDD92CAEE0060053B291 /* RegisterVC.swift */,
+			);
+			path = UserProcesses;
+			sourceTree = "<group>";
+		};
+		C6E12A262CAEE15F0066FA48 /* UsersEntity */ = {
+			isa = PBXGroup;
+			children = (
+				C6E12A272CAEE16D0066FA48 /* UserProcesses.swift */,
+			);
+			path = UsersEntity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,7 +238,10 @@
 			files = (
 				C684DDBC2CAD668F0053B291 /* LogInVC.swift in Sources */,
 				C684DDB62CAD665D0053B291 /* AppDelegate.swift in Sources */,
+				C684DDD72CAEDF140053B291 /* ForgotPasswordVC.swift in Sources */,
 				C684DDB72CAD665D0053B291 /* SceneDelegate.swift in Sources */,
+				C6E12A282CAEE16D0066FA48 /* UserProcesses.swift in Sources */,
+				C684DDDA2CAEE0060053B291 /* RegisterVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

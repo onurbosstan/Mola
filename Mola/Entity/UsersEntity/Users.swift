@@ -7,7 +7,7 @@
 
 import Foundation
 
-class UserProcesses {
+class Users {
     let email: String
     let password: String
     

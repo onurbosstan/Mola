@@ -8,12 +8,29 @@
 import UIKit
 
 class LogInVC: UIViewController {
-
+    @IBOutlet weak var emailText: UITextField!
+    @IBOutlet weak var passwordText: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
-
-
+    
+    @IBAction func logInButton(_ sender: Any) {
+        
+    }
+    
+    @IBAction func forgotPasswordButton(_ sender: Any) {
+        
+    }
+    
+    @IBAction func newAccountButton(_ sender: Any) {
+        
+    }
+    
+    @IBAction func hidePasswordButton(_ sender: Any) {
+        
+    }
+    
 }
 

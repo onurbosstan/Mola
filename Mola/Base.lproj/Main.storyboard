@@ -50,6 +50,9 @@
                                         </hierarchicalColors>
                                     </imageReference>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="hidePasswordButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5NC-H8-ie2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2r-Xt-oPW">
                                 <rect key="frame" x="249.33333333333334" y="445.66666666666669" width="127.66666666666666" height="29.666666666666686"/>
@@ -57,6 +60,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Şifremi Unuttum">
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="13"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="forgotPasswordButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kBf-eW-UBk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4lN-mZ-j3L">
                                 <rect key="frame" x="16" y="495.33333333333331" width="361" height="31.999999999999943"/>
@@ -64,6 +70,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Giriş Yap">
                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="15"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="logInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qkZ-AT-UeA"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mola'da bir hesap oluşturmak ister misiniz?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ps-5t-ejs">
                                 <rect key="frame" x="16" y="557.33333333333337" width="361" height="18"/>
@@ -77,6 +86,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Yeni bir hesap oluşturmak için buraya tıklayın.">
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="15"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="newAccountButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8hv-yr-6Vv"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -110,13 +122,15 @@
                     </view>
                     <navigationItem key="navigationItem" id="Ufa-Zy-r7o"/>
                     <connections>
-                        <segue destination="rN8-7s-LPo" kind="show" id="kVU-rI-o82"/>
-                        <segue destination="IBS-Bm-WzO" kind="show" id="52F-T1-X7a"/>
+                        <outlet property="emailText" destination="NB3-DR-sJj" id="qFR-HK-izz"/>
+                        <outlet property="passwordText" destination="NB3-DR-sJj" id="Won-yd-VYl"/>
+                        <segue destination="rN8-7s-LPo" kind="show" identifier="toForgotPassword" id="kVU-rI-o82"/>
+                        <segue destination="IBS-Bm-WzO" kind="show" identifier="toNewAcc" id="52F-T1-X7a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1052.6717557251909" y="-34.507042253521128"/>
+            <point key="canvasLocation" x="1050" y="-35"/>
         </scene>
         <!--Forgot PasswordVC-->
         <scene sceneID="CRz-cy-Zvl">
@@ -150,6 +164,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Şifremi Sıfırla">
                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="15"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="resetButton:" destination="rN8-7s-LPo" eventType="touchUpInside" id="w3K-FD-sTf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Dv3-pY-rtr"/>
@@ -170,6 +187,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9g6-Ny-H0a"/>
+                    <connections>
+                        <outlet property="emailText" destination="jWr-5W-lwM" id="yCN-by-bYH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jpS-Bw-4k4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -212,6 +232,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Kayıt Ol">
                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="15"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="registerButton:" destination="IBS-Bm-WzO" eventType="touchUpInside" id="Ow1-76-vw9"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tEj-Vr-fch">
                                 <rect key="frame" x="338" y="405.66666666666669" width="31" height="25"/>
@@ -229,6 +252,9 @@
                                         </hierarchicalColors>
                                     </imageReference>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="hidePasswordButton:" destination="IBS-Bm-WzO" eventType="touchUpInside" id="Qzc-kB-JVe"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="S4L-03-e6m"/>
@@ -254,6 +280,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0VY-Mq-92t"/>
+                    <connections>
+                        <outlet property="emailText" destination="B1s-jT-ar3" id="dCS-2d-Fig"/>
+                        <outlet property="passwordText" destination="9sc-aK-hAc" id="qz2-O1-mf0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KIQ-8A-kxs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

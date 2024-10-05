@@ -21,11 +21,11 @@ class LogInVC: UIViewController {
     }
     
     @IBAction func forgotPasswordButton(_ sender: Any) {
-        
+        self.performSegue(withIdentifier: "toForgotPassword", sender: nil)
     }
     
     @IBAction func newAccountButton(_ sender: Any) {
-        
+        self.performSegue(withIdentifier: "toNewAcc", sender: nil)
     }
     
     @IBAction func hidePasswordButton(_ sender: Any) {

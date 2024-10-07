@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C65D9F392CB454B5007A6580 /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65D9F382CB454B5007A6580 /* LogInViewModel.swift */; };
+		C65D9F3B2CB4550C007A6580 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65D9F3A2CB4550C007A6580 /* RegisterViewModel.swift */; };
+		C65D9F3D2CB45588007A6580 /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65D9F3C2CB45588007A6580 /* ForgotPasswordViewModel.swift */; };
 		C684DDA32CAD65970053B291 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C684DD9B2CAD65970053B291 /* Assets.xcassets */; };
 		C684DDA52CAD65970053B291 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C684DD9E2CAD65970053B291 /* LaunchScreen.storyboard */; };
 		C684DDA62CAD65970053B291 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C684DDA02CAD65970053B291 /* Main.storyboard */; };
@@ -26,6 +29,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C65D9F382CB454B5007A6580 /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
+		C65D9F3A2CB4550C007A6580 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		C65D9F3C2CB45588007A6580 /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
 		C684DD9B2CAD65970053B291 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C684DD9C2CAD65970053B291 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C684DD9D2CAD65970053B291 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -104,6 +110,9 @@
 		C684DDC02CAD67020053B291 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				C65D9F382CB454B5007A6580 /* LogInViewModel.swift */,
+				C65D9F3C2CB45588007A6580 /* ForgotPasswordViewModel.swift */,
+				C65D9F3A2CB4550C007A6580 /* RegisterViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -259,8 +268,11 @@
 				C684DDB62CAD665D0053B291 /* AppDelegate.swift in Sources */,
 				C684DDD72CAEDF140053B291 /* ForgotPasswordVC.swift in Sources */,
 				C684DDB72CAD665D0053B291 /* SceneDelegate.swift in Sources */,
+				C65D9F392CB454B5007A6580 /* LogInViewModel.swift in Sources */,
 				C6E12A282CAEE16D0066FA48 /* Users.swift in Sources */,
+				C65D9F3D2CB45588007A6580 /* ForgotPasswordViewModel.swift in Sources */,
 				C684DDDA2CAEE0060053B291 /* RegisterVC.swift in Sources */,
+				C65D9F3B2CB4550C007A6580 /* RegisterViewModel.swift in Sources */,
 				C6C3E19A2CB1550200C87CBB /* UserProcesses.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -126,6 +126,7 @@
                         <outlet property="passwordText" destination="NB3-DR-sJj" id="Won-yd-VYl"/>
                         <segue destination="rN8-7s-LPo" kind="show" identifier="toForgotPassword" id="kVU-rI-o82"/>
                         <segue destination="IBS-Bm-WzO" kind="show" identifier="toNewAcc" id="52F-T1-X7a"/>
+                        <segue destination="ToJ-nE-Hko" kind="presentation" identifier="toHomeVC" modalPresentationStyle="fullScreen" id="Sae-wh-cPs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -194,6 +195,108 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jpS-Bw-4k4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1843.5114503816794" y="-35.211267605633807"/>
+        </scene>
+        <!--Calendar-->
+        <scene sceneID="7b6-oH-LOe">
+            <objects>
+                <viewController id="XQP-Tw-nYP" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KkT-q9-3hm">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="hnu-cz-26A"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Calendar" image="calendar" catalog="system" id="CZb-kv-P62"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4hQ-vb-YBQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131" y="1450"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="QEI-Ni-qfF">
+            <objects>
+                <viewController id="FHm-mO-RkF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bya-je-5lb">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="orI-BN-VQI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="plus" catalog="system" id="hvA-1x-olt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H5e-sb-uKB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1050" y="1450"/>
+        </scene>
+        <!--Notes-->
+        <scene sceneID="gRp-cH-0AZ">
+            <objects>
+                <viewController id="V3m-IY-JgY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Im7-zR-Oey">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="kPO-cy-LHf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Notes" image="pencil.and.list.clipboard" catalog="system" id="0pP-DC-A3j"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r7S-Re-RT1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1966" y="1450"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="vsP-i1-Op2">
+            <objects>
+                <viewController id="mrA-9e-feu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xBf-46-akN">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="OQz-eS-Pl1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.crop.circle" catalog="system" id="o0T-0x-gPZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JVh-Pn-L7r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2863" y="1450"/>
+        </scene>
+        <!--Memories-->
+        <scene sceneID="Q51-qY-ZYo">
+            <objects>
+                <viewController id="e3D-0H-BnU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PeE-dQ-yf6">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="SmK-tr-BXD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Memories" image="book" catalog="system" id="xQS-Wt-Prd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mSr-It-qgx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-726" y="1450"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="4fi-90-SGP">
+            <objects>
+                <tabBarController id="ToJ-nE-Hko" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="quK-Sb-dgL"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bgd-f4-ep6">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="e3D-0H-BnU" kind="relationship" relationship="viewControllers" id="djg-xG-jQn"/>
+                        <segue destination="XQP-Tw-nYP" kind="relationship" relationship="viewControllers" id="fXB-Pj-Bbb"/>
+                        <segue destination="FHm-mO-RkF" kind="relationship" relationship="viewControllers" id="M5S-va-3iS"/>
+                        <segue destination="V3m-IY-JgY" kind="relationship" relationship="viewControllers" id="owG-AY-Ev9"/>
+                        <segue destination="mrA-9e-feu" kind="relationship" relationship="viewControllers" id="8ze-c1-0fW"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="94t-o6-e8S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1050" y="700"/>
         </scene>
         <!--RegisterVC-->
         <scene sceneID="XiE-Kg-8Ia">
@@ -309,8 +412,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="book" catalog="system" width="128" height="99"/>
+        <image name="calendar" catalog="system" width="128" height="107"/>
         <image name="eye.slash" catalog="system" width="128" height="97"/>
         <image name="molapng" width="401" height="402"/>
+        <image name="pencil.and.list.clipboard" catalog="system" width="114" height="128"/>
+        <image name="person.crop.circle" catalog="system" width="128" height="123"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

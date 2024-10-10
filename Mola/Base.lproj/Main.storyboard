@@ -199,7 +199,7 @@
         <!--Calendar-->
         <scene sceneID="7b6-oH-LOe">
             <objects>
-                <viewController id="XQP-Tw-nYP" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CalendarVC" id="XQP-Tw-nYP" customClass="CalendarVC" customModule="Mola" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KkT-q9-3hm">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -212,10 +212,10 @@
             </objects>
             <point key="canvasLocation" x="131" y="1450"/>
         </scene>
-        <!--View Controller-->
+        <!--HomeVC-->
         <scene sceneID="QEI-Ni-qfF">
             <objects>
-                <viewController id="FHm-mO-RkF" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" id="FHm-mO-RkF" customClass="HomeVC" customModule="Mola" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bya-je-5lb">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -231,7 +231,7 @@
         <!--Notes-->
         <scene sceneID="gRp-cH-0AZ">
             <objects>
-                <viewController id="V3m-IY-JgY" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NotesVC" id="V3m-IY-JgY" customClass="NotesVC" customModule="Mola" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Im7-zR-Oey">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -247,7 +247,7 @@
         <!--Profile-->
         <scene sceneID="vsP-i1-Op2">
             <objects>
-                <viewController id="mrA-9e-feu" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileVC" id="mrA-9e-feu" customClass="ProfileVC" customModule="Mola" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xBf-46-akN">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -263,7 +263,7 @@
         <!--Memories-->
         <scene sceneID="Q51-qY-ZYo">
             <objects>
-                <viewController id="e3D-0H-BnU" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemoriesVC" id="e3D-0H-BnU" customClass="MemoriesVC" customModule="Mola" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PeE-dQ-yf6">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -279,7 +279,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="4fi-90-SGP">
             <objects>
-                <tabBarController id="ToJ-nE-Hko" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBar" id="ToJ-nE-Hko" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="quK-Sb-dgL"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bgd-f4-ep6">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>

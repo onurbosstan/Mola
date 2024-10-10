@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if currentUser != nil {
             let board = UIStoryboard(name: "Main", bundle: nil)
             let tabBar = board.instantiateViewController(withIdentifier: "tabBar") as! UITabBarController
-            tabBar.selectedIndex = 0
+            tabBar.selectedIndex = 2
             window?.rootViewController = tabBar
         }
         guard let _ = (scene as? UIWindowScene) else { return }

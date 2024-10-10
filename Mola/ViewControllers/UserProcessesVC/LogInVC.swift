@@ -29,14 +29,17 @@ class LogInVC: UIViewController {
     }
     
     @IBAction func logInButton(_ sender: Any) {
-        if let email = emailText.text, let password = passwordText.text {
+        if let email = emailText.text, !email.isEmpty,
+           let password = passwordText.text, !password.isEmpty {
             viewModel.signIn(email: email, password: password) { error in
                 if error != nil {
-                    self.makeAlert(titleInput: "Error!", messageInput: "Username or password is wrong. Please try again, if you do not have an account, please register.")
+                    self.makeAlert(titleInput: "error!", messageInput: "Username or password is wrong. Please try again, if you do not have an account, please register.")
                 } else {
                     self.performSegue(withIdentifier: "toHomeVC", sender: nil)
                 }
             }
+        } else {
+            self.makeAlert(titleInput: "Error!", messageInput: "Please enter your email and password.")
         }
     }
     

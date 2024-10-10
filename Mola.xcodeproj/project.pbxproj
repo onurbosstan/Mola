@@ -26,6 +26,16 @@
 		C684DDDA2CAEE0060053B291 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C684DDD92CAEE0060053B291 /* RegisterVC.swift */; };
 		C6C3E19A2CB1550200C87CBB /* UserProcesses.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C3E1992CB1550200C87CBB /* UserProcesses.swift */; };
 		C6E12A282CAEE16D0066FA48 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E12A272CAEE16D0066FA48 /* Users.swift */; };
+		C6FCCC902CB7D3D600C4DEC8 /* MemoriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FCCC8F2CB7D3D600C4DEC8 /* MemoriesVC.swift */; };
+		C6FCCC922CB7D3EB00C4DEC8 /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FCCC912CB7D3EB00C4DEC8 /* CalendarVC.swift */; };
+		C6FCCC942CB7D41200C4DEC8 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FCCC932CB7D41200C4DEC8 /* HomeVC.swift */; };
+		C6FCCC962CB7D49C00C4DEC8 /* NotesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FCCC952CB7D49C00C4DEC8 /* NotesVC.swift */; };
+		C6FCCC982CB7D4A600C4DEC8 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FCCC972CB7D4A600C4DEC8 /* ProfileVC.swift */; };
+		C6FCCC9C2CB7D4DE00C4DEC8 /* MemoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FCCC9B2CB7D4DE00C4DEC8 /* MemoriesViewModel.swift */; };
+		C6FCCCA02CB7D51F00C4DEC8 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FCCC9F2CB7D51F00C4DEC8 /* CalendarViewModel.swift */; };
+		C6FCCCA22CB7D52900C4DEC8 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FCCCA12CB7D52900C4DEC8 /* HomeViewModel.swift */; };
+		C6FCCCA42CB7D53400C4DEC8 /* NotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FCCCA32CB7D53400C4DEC8 /* NotesViewModel.swift */; };
+		C6FCCCA62CB7D54000C4DEC8 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FCCCA52CB7D54000C4DEC8 /* ProfileViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +55,16 @@
 		C684DDD92CAEE0060053B291 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		C6C3E1992CB1550200C87CBB /* UserProcesses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProcesses.swift; sourceTree = "<group>"; };
 		C6E12A272CAEE16D0066FA48 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		C6FCCC8F2CB7D3D600C4DEC8 /* MemoriesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesVC.swift; sourceTree = "<group>"; };
+		C6FCCC912CB7D3EB00C4DEC8 /* CalendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
+		C6FCCC932CB7D41200C4DEC8 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		C6FCCC952CB7D49C00C4DEC8 /* NotesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesVC.swift; sourceTree = "<group>"; };
+		C6FCCC972CB7D4A600C4DEC8 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		C6FCCC9B2CB7D4DE00C4DEC8 /* MemoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesViewModel.swift; sourceTree = "<group>"; };
+		C6FCCC9F2CB7D51F00C4DEC8 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
+		C6FCCCA12CB7D52900C4DEC8 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		C6FCCCA32CB7D53400C4DEC8 /* NotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewModel.swift; sourceTree = "<group>"; };
+		C6FCCCA52CB7D54000C4DEC8 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,9 +130,8 @@
 		C684DDC02CAD67020053B291 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				C65D9F382CB454B5007A6580 /* LogInViewModel.swift */,
-				C65D9F3C2CB45588007A6580 /* ForgotPasswordViewModel.swift */,
-				C65D9F3A2CB4550C007A6580 /* RegisterViewModel.swift */,
+				C6FCCC992CB7D4AB00C4DEC8 /* UserProcessesVM */,
+				C6FCCC9A2CB7D4C900C4DEC8 /* TabBar'sVM */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -127,7 +146,8 @@
 		C684DDC22CAD671A0053B291 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				C684DDD82CAEDFE70053B291 /* UserProcesses */,
+				C684DDD82CAEDFE70053B291 /* UserProcessesVC */,
+				C6FCCC8E2CB7D3B500C4DEC8 /* TabBar'sViewControllers */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -147,14 +167,14 @@
 			path = Animation;
 			sourceTree = "<group>";
 		};
-		C684DDD82CAEDFE70053B291 /* UserProcesses */ = {
+		C684DDD82CAEDFE70053B291 /* UserProcessesVC */ = {
 			isa = PBXGroup;
 			children = (
 				C684DDBB2CAD668F0053B291 /* LogInVC.swift */,
 				C684DDD62CAEDF140053B291 /* ForgotPasswordVC.swift */,
 				C684DDD92CAEE0060053B291 /* RegisterVC.swift */,
 			);
-			path = UserProcesses;
+			path = UserProcessesVC;
 			sourceTree = "<group>";
 		};
 		C6C3E1972CB154E900C87CBB /* Data */ = {
@@ -179,6 +199,40 @@
 				C6E12A272CAEE16D0066FA48 /* Users.swift */,
 			);
 			path = UsersEntity;
+			sourceTree = "<group>";
+		};
+		C6FCCC8E2CB7D3B500C4DEC8 /* TabBar'sViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C6FCCC8F2CB7D3D600C4DEC8 /* MemoriesVC.swift */,
+				C6FCCC912CB7D3EB00C4DEC8 /* CalendarVC.swift */,
+				C6FCCC932CB7D41200C4DEC8 /* HomeVC.swift */,
+				C6FCCC952CB7D49C00C4DEC8 /* NotesVC.swift */,
+				C6FCCC972CB7D4A600C4DEC8 /* ProfileVC.swift */,
+			);
+			path = "TabBar'sViewControllers";
+			sourceTree = "<group>";
+		};
+		C6FCCC992CB7D4AB00C4DEC8 /* UserProcessesVM */ = {
+			isa = PBXGroup;
+			children = (
+				C65D9F382CB454B5007A6580 /* LogInViewModel.swift */,
+				C65D9F3C2CB45588007A6580 /* ForgotPasswordViewModel.swift */,
+				C65D9F3A2CB4550C007A6580 /* RegisterViewModel.swift */,
+			);
+			path = UserProcessesVM;
+			sourceTree = "<group>";
+		};
+		C6FCCC9A2CB7D4C900C4DEC8 /* TabBar'sVM */ = {
+			isa = PBXGroup;
+			children = (
+				C6FCCC9B2CB7D4DE00C4DEC8 /* MemoriesViewModel.swift */,
+				C6FCCC9F2CB7D51F00C4DEC8 /* CalendarViewModel.swift */,
+				C6FCCCA12CB7D52900C4DEC8 /* HomeViewModel.swift */,
+				C6FCCCA32CB7D53400C4DEC8 /* NotesViewModel.swift */,
+				C6FCCCA52CB7D54000C4DEC8 /* ProfileViewModel.swift */,
+			);
+			path = "TabBar'sVM";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,16 +318,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6FCCC982CB7D4A600C4DEC8 /* ProfileVC.swift in Sources */,
+				C6FCCCA22CB7D52900C4DEC8 /* HomeViewModel.swift in Sources */,
+				C6FCCC942CB7D41200C4DEC8 /* HomeVC.swift in Sources */,
 				C684DDBC2CAD668F0053B291 /* LogInVC.swift in Sources */,
 				C684DDB62CAD665D0053B291 /* AppDelegate.swift in Sources */,
+				C6FCCCA42CB7D53400C4DEC8 /* NotesViewModel.swift in Sources */,
+				C6FCCC922CB7D3EB00C4DEC8 /* CalendarVC.swift in Sources */,
 				C684DDD72CAEDF140053B291 /* ForgotPasswordVC.swift in Sources */,
 				C684DDB72CAD665D0053B291 /* SceneDelegate.swift in Sources */,
 				C65D9F392CB454B5007A6580 /* LogInViewModel.swift in Sources */,
+				C6FCCC902CB7D3D600C4DEC8 /* MemoriesVC.swift in Sources */,
+				C6FCCCA02CB7D51F00C4DEC8 /* CalendarViewModel.swift in Sources */,
 				C6E12A282CAEE16D0066FA48 /* Users.swift in Sources */,
 				C65D9F3D2CB45588007A6580 /* ForgotPasswordViewModel.swift in Sources */,
+				C6FCCCA62CB7D54000C4DEC8 /* ProfileViewModel.swift in Sources */,
 				C684DDDA2CAEE0060053B291 /* RegisterVC.swift in Sources */,
 				C65D9F3B2CB4550C007A6580 /* RegisterViewModel.swift in Sources */,
+				C6FCCC962CB7D49C00C4DEC8 /* NotesVC.swift in Sources */,
 				C6C3E19A2CB1550200C87CBB /* UserProcesses.swift in Sources */,
+				C6FCCC9C2CB7D4DE00C4DEC8 /* MemoriesViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

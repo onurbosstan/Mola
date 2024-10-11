@@ -52,27 +52,9 @@ extension ProfileVC: UITableViewDataSource, UITableViewDelegate {
         case 1:
             self.performSegue(withIdentifier: "toChangePassword", sender: nil)
         case 2:
-            logOut()
+            viewModel.logOut()
         default:
             break
-        }
-    }
-    func logOut() {
-        viewModel.signOut { success in
-            if success {
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                if let logInVC = storyboard.instantiateViewController(withIdentifier: "LogInVC") as? LogInVC {
-                    let navigationController = UINavigationController(rootViewController: logInVC)
-                    UIApplication.shared.windows.first?.rootViewController = navigationController
-                    UIView.transition(with: UIApplication.shared.windows.first!,
-                                      duration: 0.3,
-                                      options: .transitionCrossDissolve,
-                                      animations: nil,
-                                      completion: nil)
-                }
-            } else {
-                self.makeAlert(titleInput: "Error!", messageInput: "Logout failed")
-            }
         }
     }
 }

@@ -29,17 +29,19 @@ class LogInVC: UIViewController {
     }
     
     @IBAction func logInButton(_ sender: Any) {
-        if let email = emailText.text, !email.isEmpty,
-           let password = passwordText.text, !password.isEmpty {
+        let email = emailText.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        let password = passwordText.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        
+        if !email.isEmpty && !password.isEmpty && viewModel.isValidEmail(email) {
             viewModel.signIn(email: email, password: password) { error in
-                if error != nil {
-                    self.makeAlert(titleInput: "error!", messageInput: "Username or password is wrong. Please try again, if you do not have an account, please register.")
+                if let error = error {
+                    self.makeAlert(titleInput: "Error!", messageInput: error.localizedDescription)
                 } else {
-                    self.performSegue(withIdentifier: "toHomeVC", sender: nil)
+                    self.viewModel.updateTabBar()
                 }
             }
         } else {
-            self.makeAlert(titleInput: "Error!", messageInput: "Please enter your email and password.")
+            self.makeAlert(titleInput: "Error!", messageInput: "Please enter a valid email address and password.")
         }
     }
     
@@ -52,18 +54,16 @@ class LogInVC: UIViewController {
     }
     
     @IBAction func hidePasswordButton(_ sender: Any) {
-        if iconClick {
-            passwordText.isSecureTextEntry = false
-        } else {
-            passwordText.isSecureTextEntry = true
-        }
-        iconClick = !iconClick
+        passwordText.isSecureTextEntry.toggle()
+        iconClick.toggle()
     }
+    
     func makeAlert(titleInput: String, messageInput: String) {
         let alert = UIAlertController(title: titleInput, message: messageInput, preferredStyle: .alert)
         let okButton = UIAlertAction(title: "OK", style: .default)
         alert.addAction(okButton)
         self.present(alert, animated: true)
     }
+
 }
 

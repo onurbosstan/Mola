@@ -11,7 +11,7 @@ import FirebaseFirestore
 
 class UserProcesses {
     func signIn(email: String, password: String, completion: @escaping (Error?) -> Void) {
-        Auth.auth().signIn(withEmail: email, password: password) { _, error in
+        Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
             if let error = error {
                 completion(error)
             }else {

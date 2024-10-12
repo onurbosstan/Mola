@@ -26,6 +26,8 @@
 		C684DDDA2CAEE0060053B291 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C684DDD92CAEE0060053B291 /* RegisterVC.swift */; };
 		C6B494AF2CBA7F47004ADF01 /* ChangePasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B494AE2CBA7F47004ADF01 /* ChangePasswordVC.swift */; };
 		C6B494B12CBA7F54004ADF01 /* ChangePasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B494B02CBA7F54004ADF01 /* ChangePasswordViewModel.swift */; };
+		C6B494B32CBAA2E1004ADF01 /* ChangeEmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B494B22CBAA2E1004ADF01 /* ChangeEmailVC.swift */; };
+		C6B494B52CBAA2FA004ADF01 /* ChangeEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B494B42CBAA2FA004ADF01 /* ChangeEmailViewModel.swift */; };
 		C6C3E19A2CB1550200C87CBB /* UserProcesses.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C3E1992CB1550200C87CBB /* UserProcesses.swift */; };
 		C6CEABA52CB92DCC008B4B06 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CEABA42CB92DCC008B4B06 /* ProfileCell.swift */; };
 		C6E12A282CAEE16D0066FA48 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E12A272CAEE16D0066FA48 /* Users.swift */; };
@@ -58,6 +60,8 @@
 		C684DDD92CAEE0060053B291 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		C6B494AE2CBA7F47004ADF01 /* ChangePasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordVC.swift; sourceTree = "<group>"; };
 		C6B494B02CBA7F54004ADF01 /* ChangePasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewModel.swift; sourceTree = "<group>"; };
+		C6B494B22CBAA2E1004ADF01 /* ChangeEmailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeEmailVC.swift; sourceTree = "<group>"; };
+		C6B494B42CBAA2FA004ADF01 /* ChangeEmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeEmailViewModel.swift; sourceTree = "<group>"; };
 		C6C3E1992CB1550200C87CBB /* UserProcesses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProcesses.swift; sourceTree = "<group>"; };
 		C6CEABA42CB92DCC008B4B06 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		C6E12A272CAEE16D0066FA48 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
@@ -189,6 +193,7 @@
 			children = (
 				C6FCCC972CB7D4A600C4DEC8 /* ProfileVC.swift */,
 				C6B494AE2CBA7F47004ADF01 /* ChangePasswordVC.swift */,
+				C6B494B22CBAA2E1004ADF01 /* ChangeEmailVC.swift */,
 			);
 			path = "ProfileVC's";
 			sourceTree = "<group>";
@@ -214,6 +219,7 @@
 			children = (
 				C6FCCCA52CB7D54000C4DEC8 /* ProfileViewModel.swift */,
 				C6B494B02CBA7F54004ADF01 /* ChangePasswordViewModel.swift */,
+				C6B494B42CBAA2FA004ADF01 /* ChangeEmailViewModel.swift */,
 			);
 			path = ProfileViewModel;
 			sourceTree = "<group>";
@@ -359,11 +365,13 @@
 				C6FCCCA02CB7D51F00C4DEC8 /* CalendarViewModel.swift in Sources */,
 				C6E12A282CAEE16D0066FA48 /* Users.swift in Sources */,
 				C65D9F3D2CB45588007A6580 /* ForgotPasswordViewModel.swift in Sources */,
+				C6B494B52CBAA2FA004ADF01 /* ChangeEmailViewModel.swift in Sources */,
 				C6B494B12CBA7F54004ADF01 /* ChangePasswordViewModel.swift in Sources */,
 				C6FCCCA62CB7D54000C4DEC8 /* ProfileViewModel.swift in Sources */,
 				C684DDDA2CAEE0060053B291 /* RegisterVC.swift in Sources */,
 				C65D9F3B2CB4550C007A6580 /* RegisterViewModel.swift in Sources */,
 				C6FCCC962CB7D49C00C4DEC8 /* NotesVC.swift in Sources */,
+				C6B494B32CBAA2E1004ADF01 /* ChangeEmailVC.swift in Sources */,
 				C6C3E19A2CB1550200C87CBB /* UserProcesses.swift in Sources */,
 				C6FCCC9C2CB7D4DE00C4DEC8 /* MemoriesViewModel.swift in Sources */,
 			);

@@ -35,13 +35,13 @@ class LogInVC: UIViewController {
         if !email.isEmpty && !password.isEmpty && viewModel.isValidEmail(email) {
             viewModel.signIn(email: email, password: password) { error in
                 if let error = error {
-                    self.makeAlert(titleInput: "Error!", messageInput: error.localizedDescription)
+                    self.makeAlert(titleInput: "Hata!", messageInput: error.localizedDescription)
                 } else {
                     self.viewModel.updateTabBar()
                 }
             }
         } else {
-            self.makeAlert(titleInput: "Error!", messageInput: "Please enter a valid email address and password.")
+            self.makeAlert(titleInput: "Hata!", messageInput: "Lütfen geçerli bir eposta adresi ve şifre girin.")
         }
     }
     

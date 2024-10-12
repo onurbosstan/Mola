@@ -24,7 +24,7 @@ class RegisterVC: UIViewController {
     @IBAction func registerButton(_ sender: Any) {
         if let email = self.emailText.text, let password = self.passwordText.text {
             self.viewModel.signUp(email: email, password: password) { _ in
-                self.makeAlert(titleInput: "Success!", messageInput: "You have successfully registered.")
+                self.makeAlert(titleInput: "Başarılı!", messageInput: "Başarıyla kayıt oldunuz.")
             }
         }
     }

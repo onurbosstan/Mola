@@ -194,7 +194,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jpS-Bw-4k4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1843.5114503816794" y="-35.211267605633807"/>
+            <point key="canvasLocation" x="2022" y="-35"/>
         </scene>
         <!--Calendar-->
         <scene sceneID="7b6-oH-LOe">
@@ -308,7 +308,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z7L-HT-yA6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2090.8396946564885" y="2160.5633802816901"/>
+            <point key="canvasLocation" x="2021" y="2180"/>
         </scene>
         <!--NotesVC-->
         <scene sceneID="gRp-cH-0AZ">
@@ -319,15 +319,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKU-Er-Vno">
-                                <rect key="frame" x="330" y="34" width="47" height="34.333333333333343"/>
+                                <rect key="frame" x="330" y="29.000000000000004" width="47" height="34.333333333333343"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="plus" catalog="system" symbolScale="large"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="addButton:" destination="V3m-IY-JgY" eventType="touchUpInside" id="59e-qp-qtI"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1e3-ca-Zz0">
-                                <rect key="frame" x="0.0" y="80" width="393" height="772"/>
+                                <rect key="frame" x="0.0" y="75" width="393" height="777"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NotesCell" rowHeight="366" id="Xym-Kz-vvi" customClass="NotesCell" customModule="Mola" customModuleProvider="target">
@@ -365,7 +367,7 @@
                             <constraint firstAttribute="bottom" secondItem="1e3-ca-Zz0" secondAttribute="bottom" id="bOm-ln-taE"/>
                             <constraint firstItem="1e3-ca-Zz0" firstAttribute="top" secondItem="qKU-Er-Vno" secondAttribute="bottom" constant="11.666666666666657" id="fMt-Bb-jaY"/>
                             <constraint firstItem="1e3-ca-Zz0" firstAttribute="trailing" secondItem="kPO-cy-LHf" secondAttribute="trailing" id="fR0-PM-vTU"/>
-                            <constraint firstItem="qKU-Er-Vno" firstAttribute="top" secondItem="kPO-cy-LHf" secondAttribute="top" constant="-10" id="oIa-Pg-UnI"/>
+                            <constraint firstItem="qKU-Er-Vno" firstAttribute="top" secondItem="kPO-cy-LHf" secondAttribute="top" constant="-15" id="oIa-Pg-UnI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BG0-qv-bSC"/>
@@ -376,7 +378,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r7S-Re-RT1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2091" y="1450"/>
+            <point key="canvasLocation" x="2021" y="1450"/>
         </scene>
         <!--Profile-->
         <scene sceneID="vsP-i1-Op2">
@@ -460,7 +462,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JVh-Pn-L7r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4194.6564885496182" y="1450"/>
+            <point key="canvasLocation" x="2995" y="1450"/>
         </scene>
         <!--Change PasswordVC-->
         <scene sceneID="pfM-pf-ySZ">
@@ -576,7 +578,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bcz-A7-fGh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5101.5267175572517" y="1450"/>
+            <point key="canvasLocation" x="3740" y="1450"/>
         </scene>
         <!--Change EmailVC-->
         <scene sceneID="8vo-pG-MnK">
@@ -639,7 +641,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ccm-Hk-sN8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5959.5419847328239" y="1450"/>
+            <point key="canvasLocation" x="4471" y="1450"/>
         </scene>
         <!--Memories-->
         <scene sceneID="Q51-qY-ZYo">
@@ -651,7 +653,7 @@
                         <viewLayoutGuide key="safeArea" id="SmK-tr-BXD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Memories" image="book" catalog="system" id="xQS-Wt-Prd"/>
+                    <tabBarItem key="tabBarItem" title="Memories" image="camera.shutter.button" catalog="system" id="xQS-Wt-Prd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mSr-It-qgx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -771,7 +773,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KIQ-8A-kxs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2597.709923664122" y="-35.211267605633807"/>
+            <point key="canvasLocation" x="2995" y="-35"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kM2-t4-5SY">
@@ -808,7 +810,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EPy-cQ-dev" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3268" y="700"/>
+            <point key="canvasLocation" x="2995" y="700"/>
         </scene>
         <!--Notes-->
         <scene sceneID="MVt-ha-ZAI">
@@ -827,12 +829,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fqk-8w-cka" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2091" y="700"/>
+            <point key="canvasLocation" x="2021" y="700"/>
         </scene>
     </scenes>
     <resources>
-        <image name="book" catalog="system" width="128" height="99"/>
         <image name="calendar" catalog="system" width="128" height="107"/>
+        <image name="camera.shutter.button" catalog="system" width="128" height="108"/>
         <image name="eye.slash" catalog="system" width="128" height="97"/>
         <image name="molapng" width="401" height="402"/>
         <image name="pencil.and.list.clipboard" catalog="system" width="114" height="128"/>

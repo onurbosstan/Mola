@@ -230,15 +230,29 @@
                                     <action selector="saveButton:" destination="FHm-mO-RkF" eventType="touchUpInside" id="faU-Eu-LIb"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="B4B-7M-05l">
+                                <rect key="frame" x="0.0" y="50.333333333333314" width="393" height="752.66666666666674"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="orI-BN-VQI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="B4B-7M-05l" firstAttribute="top" secondItem="T6s-GH-9yw" secondAttribute="bottom" id="XAB-dT-Bnc"/>
+                            <constraint firstItem="orI-BN-VQI" firstAttribute="bottom" secondItem="B4B-7M-05l" secondAttribute="bottom" id="dVh-Ez-tFx"/>
                             <constraint firstItem="orI-BN-VQI" firstAttribute="trailing" secondItem="T6s-GH-9yw" secondAttribute="trailing" constant="16" id="iGH-Vb-05N"/>
+                            <constraint firstItem="B4B-7M-05l" firstAttribute="leading" secondItem="orI-BN-VQI" secondAttribute="leading" id="l5h-uz-ULN"/>
                             <constraint firstItem="T6s-GH-9yw" firstAttribute="top" secondItem="orI-BN-VQI" secondAttribute="top" constant="16" id="lI6-Pt-qRr"/>
+                            <constraint firstItem="orI-BN-VQI" firstAttribute="trailing" secondItem="B4B-7M-05l" secondAttribute="trailing" id="mLN-vK-d74"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="plus" catalog="system" id="hvA-1x-olt"/>
+                    <connections>
+                        <outlet property="textView" destination="B4B-7M-05l" id="puU-rC-cOk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H5e-sb-uKB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

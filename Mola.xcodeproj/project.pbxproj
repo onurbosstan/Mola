@@ -34,6 +34,7 @@
 		C6F8E66C2CBD93C400D1A7E4 /* NoteDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F8E66B2CBD93C400D1A7E4 /* NoteDetailsVC.swift */; };
 		C6F8E66E2CBD93DF00D1A7E4 /* NoteDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F8E66D2CBD93DF00D1A7E4 /* NoteDetailsViewModel.swift */; };
 		C6F8E6722CBD967B00D1A7E4 /* NotesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F8E6712CBD967B00D1A7E4 /* NotesCell.swift */; };
+		C6F8E6752CBE8A9E00D1A7E4 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F8E6742CBE8A9E00D1A7E4 /* Note.swift */; };
 		C6FCCC902CB7D3D600C4DEC8 /* MemoriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FCCC8F2CB7D3D600C4DEC8 /* MemoriesVC.swift */; };
 		C6FCCC922CB7D3EB00C4DEC8 /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FCCC912CB7D3EB00C4DEC8 /* CalendarVC.swift */; };
 		C6FCCC942CB7D41200C4DEC8 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FCCC932CB7D41200C4DEC8 /* HomeVC.swift */; };
@@ -71,6 +72,7 @@
 		C6F8E66B2CBD93C400D1A7E4 /* NoteDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailsVC.swift; sourceTree = "<group>"; };
 		C6F8E66D2CBD93DF00D1A7E4 /* NoteDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailsViewModel.swift; sourceTree = "<group>"; };
 		C6F8E6712CBD967B00D1A7E4 /* NotesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesCell.swift; sourceTree = "<group>"; };
+		C6F8E6742CBE8A9E00D1A7E4 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		C6FCCC8F2CB7D3D600C4DEC8 /* MemoriesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesVC.swift; sourceTree = "<group>"; };
 		C6FCCC912CB7D3EB00C4DEC8 /* CalendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
 		C6FCCC932CB7D41200C4DEC8 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				C6E12A262CAEE15F0066FA48 /* UsersEntity */,
+				C6F8E6732CBE8A8A00D1A7E4 /* NoteEntity */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -321,6 +324,14 @@
 			path = Note;
 			sourceTree = "<group>";
 		};
+		C6F8E6732CBE8A8A00D1A7E4 /* NoteEntity */ = {
+			isa = PBXGroup;
+			children = (
+				C6F8E6742CBE8A9E00D1A7E4 /* Note.swift */,
+			);
+			path = NoteEntity;
+			sourceTree = "<group>";
+		};
 		C6FCCC8E2CB7D3B500C4DEC8 /* TabBar'sViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -456,6 +467,7 @@
 				C6FCCCA02CB7D51F00C4DEC8 /* CalendarViewModel.swift in Sources */,
 				C6E12A282CAEE16D0066FA48 /* Users.swift in Sources */,
 				C65D9F3D2CB45588007A6580 /* ForgotPasswordViewModel.swift in Sources */,
+				C6F8E6752CBE8A9E00D1A7E4 /* Note.swift in Sources */,
 				C6B494B52CBAA2FA004ADF01 /* ChangeEmailViewModel.swift in Sources */,
 				C6F8E6722CBD967B00D1A7E4 /* NotesCell.swift in Sources */,
 				C6B494B12CBA7F54004ADF01 /* ChangePasswordViewModel.swift in Sources */,

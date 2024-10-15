@@ -6,9 +6,13 @@
 //
 
 import UIKit
+import FirebaseFirestore
+import FirebaseAuth
 
 class NotesVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    let db = Firestore.firestore()
+    var notes: [Note] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()

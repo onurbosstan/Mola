@@ -11,34 +11,20 @@ import FirebaseAuth
 
 class HomeVC: UIViewController {
     @IBOutlet weak var textView: UITextView!
-    let db = Firestore.firestore()
+    var viewModel = HomeViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         textView.delegate = self
     }
     
-    
     @IBAction func saveButton(_ sender: Any) {
-        guard let noteText = textView.text, !noteText.isEmpty else {
-            return
-        }
-        guard let user = Auth.auth().currentUser else {
-            print("User not authenticated")
-            return
-        }
-        let noteData: [String: Any] = [
-            "content": noteText,
-            "date": Timestamp(date: Date()),
-            "userId": user.uid
-        ]
-        db.collection("Notes").addDocument(data: noteData) { error in
-            if let error = error {
-                self.makeAlert(titleInput: "Hata!", messageInput: "Notunuz kaydedilmedi.")
-            } else {
+        viewModel.saveNote(content: textView.text) { success in
+            if success {
                 self.textView.text = ""
                 self.navigationController?.popViewController(animated: true)
+            } else {
+                self.makeAlert(titleInput: "Hata!", messageInput: "Not kaydedilirken hata oluştu!")
             }
         }
     }

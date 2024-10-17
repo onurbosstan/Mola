@@ -20,14 +20,20 @@ class HomeVC: UIViewController {
     
     @IBAction func saveButton(_ sender: Any) {
         viewModel.saveNote(content: textView.text) { success in
-            if success {
-                self.textView.text = ""
-                self.navigationController?.popViewController(animated: true)
-            } else {
-                self.makeAlert(titleInput: "Hata!", messageInput: "Not kaydedilirken hata oluştu!")
+                    if success {
+                        self.textView.text = ""
+                        
+                        if let navController = self.navigationController, let notesVC = navController.viewControllers.first(where: { $0 is NotesVC }) as? NotesVC {
+                            notesVC.viewModel.loadNotes {
+                                notesVC.tableView.reloadData()
+             }
             }
+            self.navigationController?.popViewController(animated: true)
+            } else {
+            self.makeAlert(titleInput: "Hata!", messageInput: "Not kaydedilirken hata oluştu!")
         }
     }
+}
     func makeAlert(titleInput: String, messageInput: String) {
         let alert = UIAlertController(title: titleInput, message: messageInput, preferredStyle: .alert)
         let okButton = UIAlertAction(title: "OK", style: .default)

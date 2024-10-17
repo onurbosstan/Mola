@@ -17,6 +17,9 @@ class NotesVC: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         viewModel.loadNotes { [weak self] in
             self?.tableView.reloadData()
@@ -34,7 +37,7 @@ extension NotesVC: UITableViewDataSource, UITableViewDelegate {
         return viewModel.notes.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "NoteCell", for: indexPath) as! NotesCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "NotesCell", for: indexPath) as! NotesCell
         let note = viewModel.notes[indexPath.row]
         cell.textLabel?.text = note.content
         return cell
@@ -42,5 +45,8 @@ extension NotesVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedNote = viewModel.notes[indexPath.row]
         performSegue(withIdentifier: "toDetailVC", sender: selectedNote)
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 75
     }
 }

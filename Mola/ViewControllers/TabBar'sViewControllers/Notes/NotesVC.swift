@@ -27,8 +27,7 @@ class NotesVC: UIViewController {
     }
     
     @IBAction func addButton(_ sender: Any) {
-        
-        
+        self.tabBarController?.selectedIndex = 2
     }
     
 }

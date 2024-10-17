@@ -11,13 +11,16 @@ import FirebaseAuth
 
 class NotesVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    let db = Firestore.firestore()
-    var notes: [Note] = []
+    var viewModel = NotesViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        viewModel.loadNotes { [weak self] in
+            self?.tableView.reloadData()
+        }
     }
     
     @IBAction func addButton(_ sender: Any) {
@@ -25,4 +28,19 @@ class NotesVC: UIViewController {
         
     }
     
+}
+extension NotesVC: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.notes.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "NoteCell", for: indexPath) as! NotesCell
+        let note = viewModel.notes[indexPath.row]
+        cell.textLabel?.text = note.content
+        return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedNote = viewModel.notes[indexPath.row]
+        performSegue(withIdentifier: "toDetailVC", sender: selectedNote)
+    }
 }

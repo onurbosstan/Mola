@@ -38,7 +38,7 @@ extension NotesVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NotesCell", for: indexPath) as! NotesCell
         let note = viewModel.notes[indexPath.row]
-        cell.textLabel?.text = note.content
+        cell.contentLabel.text = note.content
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

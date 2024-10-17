@@ -30,11 +30,21 @@ class NotesViewModel {
                         let data = doc.data()
                         let content = data["content"] as? String ?? ""
                         let date = (data["date"] as? Timestamp)?.dateValue() ?? Date()
-                        return Note(content: content, date: date)
+                        let id = doc.documentID
+                        return Note(id: id, content: content, date: date)
                     } ?? []
                     completion()
                 }
             }
     }
-    
+    func deleteNote(note: Note, completion: @escaping (Bool) -> Void) {
+        db.collection("notes").document(note.id).delete { error in
+            if let error = error {
+                print("Error deleting note: \(error)")
+                completion(false)
+            } else {
+                completion(true)
+            }
+        }
+    }
 }

@@ -269,53 +269,57 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AP8-J2-ce2">
                                 <rect key="frame" x="0.0" y="44" width="393" height="759"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="contentsLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYJ-O4-pdu">
-                                        <rect key="frame" x="8" y="89" width="377" height="18"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dateLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QvU-JT-Kh5">
                                         <rect key="frame" x="109" y="21" width="175" height="21"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="5Hh-MG-eYF"/>
-                                            <constraint firstAttribute="width" constant="175" id="kVj-y7-FKS"/>
+                                            <constraint firstAttribute="height" constant="21" id="AHg-C6-xK4"/>
+                                            <constraint firstAttribute="width" constant="175" id="Q8D-Q6-wss"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SYA-cp-FgJ">
+                                        <rect key="frame" x="8" y="50" width="377" height="701"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="701" id="5n2-uC-350"/>
+                                        </constraints>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="rYJ-O4-pdu" firstAttribute="leading" secondItem="AP8-J2-ce2" secondAttribute="leadingMargin" id="PBJ-kZ-G6T"/>
-                                    <constraint firstItem="rYJ-O4-pdu" firstAttribute="trailing" secondItem="AP8-J2-ce2" secondAttribute="trailingMargin" id="Pyn-Bd-ykw"/>
-                                    <constraint firstItem="QvU-JT-Kh5" firstAttribute="top" secondItem="AP8-J2-ce2" secondAttribute="top" constant="21" id="Stw-Qq-6Vp"/>
-                                    <constraint firstItem="QvU-JT-Kh5" firstAttribute="centerX" secondItem="rYJ-O4-pdu" secondAttribute="centerX" id="aZN-HC-jlL"/>
-                                    <constraint firstAttribute="bottom" secondItem="rYJ-O4-pdu" secondAttribute="bottom" constant="634" id="f1i-7V-2PR"/>
-                                    <constraint firstItem="rYJ-O4-pdu" firstAttribute="top" secondItem="QvU-JT-Kh5" secondAttribute="bottom" constant="47" id="fEv-OU-4mH"/>
-                                    <constraint firstItem="QvU-JT-Kh5" firstAttribute="centerX" secondItem="AP8-J2-ce2" secondAttribute="centerX" id="qN2-nA-FCu"/>
+                                    <constraint firstItem="SYA-cp-FgJ" firstAttribute="trailing" secondItem="AP8-J2-ce2" secondAttribute="trailingMargin" id="7Kb-F3-91l"/>
+                                    <constraint firstItem="QvU-JT-Kh5" firstAttribute="top" secondItem="AP8-J2-ce2" secondAttribute="top" constant="21" id="LZl-Un-fGv"/>
+                                    <constraint firstItem="QvU-JT-Kh5" firstAttribute="centerX" secondItem="SYA-cp-FgJ" secondAttribute="centerX" id="P5B-6i-n2i"/>
+                                    <constraint firstItem="SYA-cp-FgJ" firstAttribute="leading" secondItem="AP8-J2-ce2" secondAttribute="leadingMargin" id="Ug8-Du-dGu"/>
+                                    <constraint firstItem="SYA-cp-FgJ" firstAttribute="top" secondItem="QvU-JT-Kh5" secondAttribute="bottom" constant="8" id="csd-Jb-y5y"/>
+                                    <constraint firstItem="SYA-cp-FgJ" firstAttribute="bottom" secondItem="AP8-J2-ce2" secondAttribute="bottomMargin" id="xw5-xQ-1NT"/>
+                                    <constraint firstItem="QvU-JT-Kh5" firstAttribute="centerX" secondItem="AP8-J2-ce2" secondAttribute="centerX" id="ziL-xV-Bio"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Djd-eg-b4V"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="AP8-J2-ce2" firstAttribute="leading" secondItem="Djd-eg-b4V" secondAttribute="leading" id="Opm-Xk-zwy"/>
-                            <constraint firstItem="AP8-J2-ce2" firstAttribute="bottom" secondItem="Djd-eg-b4V" secondAttribute="bottom" id="Z5U-du-gok"/>
-                            <constraint firstItem="AP8-J2-ce2" firstAttribute="centerX" secondItem="JnJ-lE-bPc" secondAttribute="centerX" id="bMC-Ki-Oms"/>
-                            <constraint firstItem="AP8-J2-ce2" firstAttribute="top" secondItem="Djd-eg-b4V" secondAttribute="top" id="ec9-RZ-KEy"/>
+                            <constraint firstItem="AP8-J2-ce2" firstAttribute="bottom" secondItem="Djd-eg-b4V" secondAttribute="bottom" id="Ibm-9c-WKF"/>
+                            <constraint firstItem="AP8-J2-ce2" firstAttribute="leading" secondItem="Djd-eg-b4V" secondAttribute="leading" id="PBW-a4-c1g"/>
+                            <constraint firstItem="AP8-J2-ce2" firstAttribute="top" secondItem="Djd-eg-b4V" secondAttribute="top" id="elu-Jf-Dj3"/>
+                            <constraint firstItem="AP8-J2-ce2" firstAttribute="centerX" secondItem="JnJ-lE-bPc" secondAttribute="centerX" id="yzm-BC-D0h"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5A7-gG-xtY"/>
                     <connections>
-                        <outlet property="contentsLabel" destination="rYJ-O4-pdu" id="c7j-ea-MMG"/>
+                        <outlet property="contentsTextView" destination="SYA-cp-FgJ" id="VEG-X5-bVi"/>
                         <outlet property="dateLabel" destination="QvU-JT-Kh5" id="QJL-fT-j8p"/>
                         <outlet property="scrollView" destination="AP8-J2-ce2" id="Uxl-sc-VL9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z7L-HT-yA6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2021" y="2180"/>
+            <point key="canvasLocation" x="2020.6106870229007" y="2179.5774647887324"/>
         </scene>
         <!--NotesVC-->
         <scene sceneID="gRp-cH-0AZ">

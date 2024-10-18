@@ -45,6 +45,14 @@ extension NotesVC: UITableViewDataSource, UITableViewDelegate {
         let selectedNote = viewModel.notes[indexPath.row]
         performSegue(withIdentifier: "toDetailVC", sender: selectedNote)
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetailVC",
+           let destinationVC = segue.destination as? NoteDetailsVC {
+            if let selectedNote = sender as? Note {
+                destinationVC.viewModel.note = selectedNote
+            }
+        }
+    }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 75
     }

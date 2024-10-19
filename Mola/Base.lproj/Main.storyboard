@@ -256,7 +256,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H5e-sb-uKB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1050" y="1450"/>
+            <point key="canvasLocation" x="1049.6183206106871" y="1450"/>
         </scene>
         <!--Note DetailsVC-->
         <scene sceneID="Ia0-wI-m5b">
@@ -340,7 +340,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1e3-ca-Zz0">
-                                <rect key="frame" x="0.0" y="119" width="393" height="733"/>
+                                <rect key="frame" x="0.0" y="135" width="393" height="717"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NotesCell" rowHeight="366" id="Xym-Kz-vvi" customClass="NotesCell" customModule="Mola" customModuleProvider="target">
@@ -369,8 +369,16 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="molapng" translatesAutoresizingMaskIntoConstraints="NO" id="r3h-mc-jum">
+                                <rect key="frame" x="16" y="21.333333333333329" width="60" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="Lrd-j4-y4U"/>
+                                    <constraint firstAttribute="width" secondItem="r3h-mc-jum" secondAttribute="height" multiplier="6:5" id="kQc-9x-Nsc"/>
+                                    <constraint firstAttribute="height" constant="50" id="ytW-gl-jgD"/>
+                                </constraints>
+                            </imageView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="qS9-Aa-qQi">
-                                <rect key="frame" x="0.0" y="63" width="393" height="56"/>
+                                <rect key="frame" x="0.0" y="79" width="393" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="V3m-IY-JgY" id="R8K-cL-3ze"/>
@@ -380,15 +388,17 @@
                         <viewLayoutGuide key="safeArea" id="kPO-cy-LHf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="1e3-ca-Zz0" secondAttribute="bottom" id="DaO-Ui-37c"/>
-                            <constraint firstItem="1e3-ca-Zz0" firstAttribute="leading" secondItem="kPO-cy-LHf" secondAttribute="leading" id="Etg-R1-3DY"/>
-                            <constraint firstItem="qS9-Aa-qQi" firstAttribute="leading" secondItem="kPO-cy-LHf" secondAttribute="leading" id="HWa-hc-7PX"/>
+                            <constraint firstItem="1e3-ca-Zz0" firstAttribute="trailing" secondItem="kPO-cy-LHf" secondAttribute="trailing" id="D3S-N9-VrJ"/>
+                            <constraint firstAttribute="bottom" secondItem="1e3-ca-Zz0" secondAttribute="bottom" id="E6O-Qt-SOE"/>
                             <constraint firstItem="kPO-cy-LHf" firstAttribute="trailing" secondItem="qKU-Er-Vno" secondAttribute="trailing" constant="16" id="IdY-nX-cTN"/>
-                            <constraint firstItem="qS9-Aa-qQi" firstAttribute="trailing" secondItem="kPO-cy-LHf" secondAttribute="trailing" id="MGE-fC-XFS"/>
-                            <constraint firstItem="qS9-Aa-qQi" firstAttribute="top" secondItem="qKU-Er-Vno" secondAttribute="bottom" constant="-0.33333333333334281" id="Omf-dg-B58"/>
-                            <constraint firstItem="1e3-ca-Zz0" firstAttribute="trailing" secondItem="kPO-cy-LHf" secondAttribute="trailing" id="YFm-xF-x2G"/>
-                            <constraint firstItem="1e3-ca-Zz0" firstAttribute="top" secondItem="qS9-Aa-qQi" secondAttribute="bottom" id="fHY-kH-Jjb"/>
+                            <constraint firstItem="1e3-ca-Zz0" firstAttribute="leading" secondItem="kPO-cy-LHf" secondAttribute="leading" id="X94-dn-vxJ"/>
+                            <constraint firstItem="qS9-Aa-qQi" firstAttribute="leading" secondItem="kPO-cy-LHf" secondAttribute="leading" id="Zwc-yF-hcm"/>
+                            <constraint firstItem="qS9-Aa-qQi" firstAttribute="top" secondItem="r3h-mc-jum" secondAttribute="bottom" constant="7.6666666666666714" id="cJh-Xm-6vo"/>
+                            <constraint firstItem="1e3-ca-Zz0" firstAttribute="top" secondItem="qS9-Aa-qQi" secondAttribute="bottom" id="o4A-Xr-pOw"/>
                             <constraint firstItem="qKU-Er-Vno" firstAttribute="top" secondItem="kPO-cy-LHf" secondAttribute="top" constant="-15" id="oIa-Pg-UnI"/>
+                            <constraint firstItem="r3h-mc-jum" firstAttribute="leading" secondItem="kPO-cy-LHf" secondAttribute="leading" constant="16" id="sDW-3T-9nI"/>
+                            <constraint firstItem="qS9-Aa-qQi" firstAttribute="trailing" secondItem="kPO-cy-LHf" secondAttribute="trailing" id="zM0-vh-1hI"/>
+                            <constraint firstItem="r3h-mc-jum" firstAttribute="centerY" secondItem="qKU-Er-Vno" secondAttribute="centerY" id="zQC-NK-6bi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BG0-qv-bSC"/>

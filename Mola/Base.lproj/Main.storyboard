@@ -286,7 +286,7 @@
                                             <constraint firstAttribute="height" constant="701" id="5n2-uC-350"/>
                                         </constraints>
                                         <color key="textColor" systemColor="labelColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
@@ -340,7 +340,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1e3-ca-Zz0">
-                                <rect key="frame" x="0.0" y="75" width="393" height="777"/>
+                                <rect key="frame" x="0.0" y="119" width="393" height="733"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NotesCell" rowHeight="366" id="Xym-Kz-vvi" customClass="NotesCell" customModule="Mola" customModuleProvider="target">
@@ -369,27 +369,38 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="qS9-Aa-qQi">
+                                <rect key="frame" x="0.0" y="63" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="V3m-IY-JgY" id="R8K-cL-3ze"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kPO-cy-LHf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="1e3-ca-Zz0" firstAttribute="leading" secondItem="kPO-cy-LHf" secondAttribute="leading" id="7dR-gv-nrB"/>
+                            <constraint firstAttribute="bottom" secondItem="1e3-ca-Zz0" secondAttribute="bottom" id="DaO-Ui-37c"/>
+                            <constraint firstItem="1e3-ca-Zz0" firstAttribute="leading" secondItem="kPO-cy-LHf" secondAttribute="leading" id="Etg-R1-3DY"/>
+                            <constraint firstItem="qS9-Aa-qQi" firstAttribute="leading" secondItem="kPO-cy-LHf" secondAttribute="leading" id="HWa-hc-7PX"/>
                             <constraint firstItem="kPO-cy-LHf" firstAttribute="trailing" secondItem="qKU-Er-Vno" secondAttribute="trailing" constant="16" id="IdY-nX-cTN"/>
-                            <constraint firstAttribute="bottom" secondItem="1e3-ca-Zz0" secondAttribute="bottom" id="bOm-ln-taE"/>
-                            <constraint firstItem="1e3-ca-Zz0" firstAttribute="top" secondItem="qKU-Er-Vno" secondAttribute="bottom" constant="11.666666666666657" id="fMt-Bb-jaY"/>
-                            <constraint firstItem="1e3-ca-Zz0" firstAttribute="trailing" secondItem="kPO-cy-LHf" secondAttribute="trailing" id="fR0-PM-vTU"/>
+                            <constraint firstItem="qS9-Aa-qQi" firstAttribute="trailing" secondItem="kPO-cy-LHf" secondAttribute="trailing" id="MGE-fC-XFS"/>
+                            <constraint firstItem="qS9-Aa-qQi" firstAttribute="top" secondItem="qKU-Er-Vno" secondAttribute="bottom" constant="-0.33333333333334281" id="Omf-dg-B58"/>
+                            <constraint firstItem="1e3-ca-Zz0" firstAttribute="trailing" secondItem="kPO-cy-LHf" secondAttribute="trailing" id="YFm-xF-x2G"/>
+                            <constraint firstItem="1e3-ca-Zz0" firstAttribute="top" secondItem="qS9-Aa-qQi" secondAttribute="bottom" id="fHY-kH-Jjb"/>
                             <constraint firstItem="qKU-Er-Vno" firstAttribute="top" secondItem="kPO-cy-LHf" secondAttribute="top" constant="-15" id="oIa-Pg-UnI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BG0-qv-bSC"/>
                     <connections>
+                        <outlet property="searchBar" destination="qS9-Aa-qQi" id="CKd-nN-pdR"/>
                         <outlet property="tableView" destination="1e3-ca-Zz0" id="fwL-hY-59P"/>
                         <segue destination="KDj-ME-8g8" kind="show" identifier="toDetailVC" id="qLo-IR-Hzw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r7S-Re-RT1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2021" y="1450"/>
+            <point key="canvasLocation" x="2020.6106870229007" y="1450"/>
         </scene>
         <!--Profile-->
         <scene sceneID="vsP-i1-Op2">
@@ -855,13 +866,13 @@
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="secondaryLabelColor">
-            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="tertiaryLabelColor">
-            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29803921570000003" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

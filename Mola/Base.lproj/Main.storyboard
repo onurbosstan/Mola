@@ -701,8 +701,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="460"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dateLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHw-sU-L97">
-                                                    <rect key="frame" x="36" y="21" width="321" height="13.333333333333336"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dateLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHw-sU-L97">
+                                                    <rect key="frame" x="36" y="21" width="51.333333333333343" height="13.333333333333336"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -720,14 +720,27 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wrl-J9-DxS">
+                                                    <rect key="frame" x="343" y="13.333333333333336" width="30" height="29"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="29" id="E30-9x-Ndl"/>
+                                                        <constraint firstAttribute="width" constant="30" id="tsX-FC-eXa"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="line.3.horizontal.decrease.circle" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="deleteButtonTapped:" destination="FWd-GF-Tb3" eventType="touchUpInside" id="Ykm-NR-q5o"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="pHw-sU-L97" secondAttribute="trailing" constant="16" id="9jj-FY-Q7e"/>
+                                                <constraint firstItem="Wrl-J9-DxS" firstAttribute="trailing" secondItem="SOS-dT-E0Q" secondAttribute="trailingMargin" id="CTh-LX-CQs"/>
                                                 <constraint firstItem="pHw-sU-L97" firstAttribute="leading" secondItem="SOS-dT-E0Q" secondAttribute="leadingMargin" constant="16" id="EHe-fU-2qm"/>
                                                 <constraint firstItem="mX5-z6-PWs" firstAttribute="top" secondItem="pHw-sU-L97" secondAttribute="bottom" constant="13.666666666666664" id="PYf-cG-s3W"/>
                                                 <constraint firstItem="Zsp-TO-7Or" firstAttribute="top" secondItem="mX5-z6-PWs" secondAttribute="bottom" constant="10" id="TMy-Tc-cSG"/>
                                                 <constraint firstItem="pHw-sU-L97" firstAttribute="top" secondItem="SOS-dT-E0Q" secondAttribute="topMargin" constant="10" id="VBp-Od-6mO"/>
                                                 <constraint firstAttribute="trailing" secondItem="Zsp-TO-7Or" secondAttribute="trailing" constant="16" id="e3x-co-Zcp"/>
+                                                <constraint firstItem="Wrl-J9-DxS" firstAttribute="centerY" secondItem="pHw-sU-L97" secondAttribute="centerY" id="eVh-LE-baZ"/>
                                                 <constraint firstItem="Zsp-TO-7Or" firstAttribute="leading" secondItem="SOS-dT-E0Q" secondAttribute="leading" constant="16" id="kzS-1t-J5m"/>
                                                 <constraint firstItem="mX5-z6-PWs" firstAttribute="leading" secondItem="SOS-dT-E0Q" secondAttribute="leadingMargin" id="pLF-p9-92r"/>
                                                 <constraint firstItem="mX5-z6-PWs" firstAttribute="trailing" secondItem="SOS-dT-E0Q" secondAttribute="trailingMargin" id="uiR-GK-OQO"/>
@@ -736,6 +749,7 @@
                                         <connections>
                                             <outlet property="contentLabel" destination="Zsp-TO-7Or" id="rlC-Wc-tzX"/>
                                             <outlet property="dateLabel" destination="pHw-sU-L97" id="ubB-3e-gVL"/>
+                                            <outlet property="deleteMenuButton" destination="Wrl-J9-DxS" id="ynE-sA-tZM"/>
                                             <outlet property="memoriesImageView" destination="mX5-z6-PWs" id="QhO-Lx-zWr"/>
                                         </connections>
                                     </tableViewCell>
@@ -1032,6 +1046,7 @@
         <image name="calendar" catalog="system" width="128" height="107"/>
         <image name="camera.shutter.button" catalog="system" width="128" height="108"/>
         <image name="eye.slash" catalog="system" width="128" height="97"/>
+        <image name="line.3.horizontal.decrease.circle" catalog="system" width="128" height="123"/>
         <image name="memo" width="360" height="360"/>
         <image name="molapng" width="401" height="402"/>
         <image name="paperplane" catalog="system" width="128" height="119"/>

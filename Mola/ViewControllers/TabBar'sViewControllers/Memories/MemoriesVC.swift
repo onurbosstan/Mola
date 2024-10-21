@@ -54,10 +54,38 @@ extension MemoriesVC: UITableViewDelegate, UITableViewDataSource {
                     }
                 }
             }
+            cell.deleteAction = { [weak self] in
+                self?.presentDeleteAlert(for: memory, at: indexPath)
+            }
         }
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 300
+    }
+    func presentDeleteAlert(for memory: Memories, at indexPath: IndexPath) {
+        let alert = UIAlertController(title: "Sil", message: "Bu anıyı silmek istediğinizden emin misiniz?", preferredStyle: .alert)
+        
+        let deleteAction = UIAlertAction(title: "Sil", style: .destructive) { _ in
+            self.deleteMemory(memory, at: indexPath)
+        }
+        let cancelAction = UIAlertAction(title: "Vazgeç", style: .cancel, handler: nil)
+        
+        alert.addAction(deleteAction)
+        alert.addAction(cancelAction)
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    func deleteMemory(_ memory: Memories, at indexPath: IndexPath) {
+        viewModel.deleteMemory(memory: memory) { [weak self] success in
+            if success {
+                self?.viewModel.memories.remove(at: indexPath.row)
+                DispatchQueue.main.async {
+                    self?.tableView.deleteRows(at: [indexPath], with: .automatic)
+                }
+            } else {
+                print("Anı silinirken bir hata oluştu.")
+            }
+        }
     }
 }

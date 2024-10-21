@@ -11,4 +11,5 @@ struct Memories {
     let date: String
     let comment: String
     let imageURL: String
+    let documentID: String
 }

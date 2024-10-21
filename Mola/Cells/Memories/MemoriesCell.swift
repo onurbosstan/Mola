@@ -11,6 +11,8 @@ class MemoriesCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var memoriesImageView: UIImageView!
     @IBOutlet weak var contentLabel: UILabel!
+    @IBOutlet weak var deleteMenuButton: UIButton!
+    var deleteAction: (() -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,7 +22,10 @@ class MemoriesCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
-
+    
+    @IBAction func deleteButtonTapped(_ sender: Any) {
+        deleteAction?()
+    }
+    
 }

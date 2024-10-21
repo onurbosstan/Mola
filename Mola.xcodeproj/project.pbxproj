@@ -174,8 +174,8 @@
 			isa = PBXGroup;
 			children = (
 				C6168A942CC45CFA006A9C60 /* Memories */,
-				C6F8E66F2CBD965900D1A7E4 /* Profile */,
 				C6F8E6702CBD966100D1A7E4 /* Note */,
+				C6F8E66F2CBD965900D1A7E4 /* Profile */,
 			);
 			path = Cells;
 			sourceTree = "<group>";

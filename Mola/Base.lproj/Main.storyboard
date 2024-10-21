@@ -196,7 +196,7 @@
             </objects>
             <point key="canvasLocation" x="2022" y="-35"/>
         </scene>
-        <!--Calendar-->
+        <!--Takvim-->
         <scene sceneID="7b6-oH-LOe">
             <objects>
                 <viewController storyboardIdentifier="CalendarVC" id="XQP-Tw-nYP" customClass="CalendarVC" customModule="Mola" customModuleProvider="target" sceneMemberID="viewController">
@@ -206,7 +206,7 @@
                         <viewLayoutGuide key="safeArea" id="hnu-cz-26A"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Calendar" image="calendar" catalog="system" id="CZb-kv-P62"/>
+                    <tabBarItem key="tabBarItem" title="Takvim" image="calendar" catalog="system" id="CZb-kv-P62"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4hQ-vb-YBQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -690,7 +690,7 @@
                                     <constraint firstAttribute="width" constant="80" id="RBG-15-mSd"/>
                                 </constraints>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OA7-wF-dIU">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OA7-wF-dIU">
                                 <rect key="frame" x="0.0" y="89" width="393" height="714"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -716,7 +716,7 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="contentLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zsp-TO-7Or">
                                                     <rect key="frame" x="16" y="258" width="361" height="18"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -784,27 +784,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="memo" translatesAutoresizingMaskIntoConstraints="NO" id="Cfk-z3-X1s">
-                                <rect key="frame" x="16" y="129" width="360" height="300"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="memo" translatesAutoresizingMaskIntoConstraints="NO" id="Cfk-z3-X1s">
+                                <rect key="frame" x="16" y="139" width="360" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="GEA-q6-Rda"/>
                                     <constraint firstAttribute="width" constant="360" id="H1V-6l-jcu"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="molapng" translatesAutoresizingMaskIntoConstraints="NO" id="sgp-Sg-LVf">
-                                <rect key="frame" x="16" y="44" width="60" height="50"/>
+                                <rect key="frame" x="16" y="44" width="80" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="IFd-SM-zCw"/>
-                                    <constraint firstAttribute="width" constant="60" id="V0j-QH-rVS"/>
+                                    <constraint firstAttribute="height" constant="60" id="IFd-SM-zCw"/>
+                                    <constraint firstAttribute="width" constant="80" id="V0j-QH-rVS"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Yorum giriniz..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yGe-OC-Oqq">
-                                <rect key="frame" x="16" y="445" width="361" height="34"/>
+                                <rect key="frame" x="16" y="455" width="361" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eyp-NZ-Nib">
-                                <rect key="frame" x="326" y="51.666666666666657" width="51" height="35"/>
+                                <rect key="frame" x="326" y="56.666666666666657" width="51" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="paperplane" catalog="system"/>
                                 <connections>
@@ -970,11 +970,11 @@
             </objects>
             <point key="canvasLocation" x="130.53435114503816" y="-34.507042253521128"/>
         </scene>
-        <!--Profile-->
+        <!--Profil-->
         <scene sceneID="IBP-g0-wqp">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9mz-VS-aS6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" image="person.crop.circle" catalog="system" id="o0T-0x-gPZ"/>
+                    <tabBarItem key="tabBarItem" title="Profil" image="person.crop.circle" catalog="system" id="o0T-0x-gPZ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nNl-Hb-Kql">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
@@ -989,11 +989,11 @@
             </objects>
             <point key="canvasLocation" x="3921" y="700"/>
         </scene>
-        <!--Notes-->
+        <!--Notlar-->
         <scene sceneID="MVt-ha-ZAI">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bIV-X9-tOX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Notes" image="pencil.and.list.clipboard" catalog="system" id="0pP-DC-A3j"/>
+                    <tabBarItem key="tabBarItem" title="Notlar" image="pencil.and.list.clipboard" catalog="system" id="0pP-DC-A3j"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="oIc-Rd-XBA">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
@@ -1008,11 +1008,11 @@
             </objects>
             <point key="canvasLocation" x="2947" y="700"/>
         </scene>
-        <!--Memories-->
+        <!--Anılar-->
         <scene sceneID="vnS-0h-acR">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PGo-yi-LW0" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Memories" image="camera.shutter.button" catalog="system" id="xQS-Wt-Prd"/>
+                    <tabBarItem key="tabBarItem" title="Anılar" image="camera.shutter.button" catalog="system" id="xQS-Wt-Prd"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nBP-lr-93e">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>

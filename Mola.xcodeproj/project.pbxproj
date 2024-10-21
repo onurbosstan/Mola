@@ -29,6 +29,7 @@
 		C6B494B12CBA7F54004ADF01 /* ChangePasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B494B02CBA7F54004ADF01 /* ChangePasswordViewModel.swift */; };
 		C6B494B32CBAA2E1004ADF01 /* ChangeEmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B494B22CBAA2E1004ADF01 /* ChangeEmailVC.swift */; };
 		C6B494B52CBAA2FA004ADF01 /* ChangeEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B494B42CBAA2FA004ADF01 /* ChangeEmailViewModel.swift */; };
+		C6B515152CC6B4A100EE78E7 /* MemoriesUploadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B515142CC6B4A100EE78E7 /* MemoriesUploadViewModel.swift */; };
 		C6C3E19A2CB1550200C87CBB /* UserProcesses.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C3E1992CB1550200C87CBB /* UserProcesses.swift */; };
 		C6CEABA52CB92DCC008B4B06 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CEABA42CB92DCC008B4B06 /* ProfileCell.swift */; };
 		C6D556392CC46406003BB8B7 /* MemoriesUploadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D556382CC46406003BB8B7 /* MemoriesUploadVC.swift */; };
@@ -69,6 +70,7 @@
 		C6B494B02CBA7F54004ADF01 /* ChangePasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewModel.swift; sourceTree = "<group>"; };
 		C6B494B22CBAA2E1004ADF01 /* ChangeEmailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeEmailVC.swift; sourceTree = "<group>"; };
 		C6B494B42CBAA2FA004ADF01 /* ChangeEmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeEmailViewModel.swift; sourceTree = "<group>"; };
+		C6B515142CC6B4A100EE78E7 /* MemoriesUploadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesUploadViewModel.swift; sourceTree = "<group>"; };
 		C6C3E1992CB1550200C87CBB /* UserProcesses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProcesses.swift; sourceTree = "<group>"; };
 		C6CEABA42CB92DCC008B4B06 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		C6D556382CC46406003BB8B7 /* MemoriesUploadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesUploadVC.swift; sourceTree = "<group>"; };
@@ -293,6 +295,7 @@
 			isa = PBXGroup;
 			children = (
 				C6FCCC9B2CB7D4DE00C4DEC8 /* MemoriesViewModel.swift */,
+				C6B515142CC6B4A100EE78E7 /* MemoriesUploadViewModel.swift */,
 			);
 			path = MemoriesVM;
 			sourceTree = "<group>";
@@ -473,6 +476,7 @@
 				C684DDB62CAD665D0053B291 /* AppDelegate.swift in Sources */,
 				C6FCCCA42CB7D53400C4DEC8 /* NotesViewModel.swift in Sources */,
 				C6CEABA52CB92DCC008B4B06 /* ProfileCell.swift in Sources */,
+				C6B515152CC6B4A100EE78E7 /* MemoriesUploadViewModel.swift in Sources */,
 				C6FCCC922CB7D3EB00C4DEC8 /* CalendarVC.swift in Sources */,
 				C684DDD72CAEDF140053B291 /* ForgotPasswordVC.swift in Sources */,
 				C684DDB72CAD665D0053B291 /* SceneDelegate.swift in Sources */,

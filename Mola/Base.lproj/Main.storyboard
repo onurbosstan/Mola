@@ -684,14 +684,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="molapng" translatesAutoresizingMaskIntoConstraints="NO" id="fip-aZ-Yau">
-                                <rect key="frame" x="16" y="40" width="80" height="60"/>
+                                <rect key="frame" x="16" y="29" width="80" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="M7R-kq-3vL"/>
-                                    <constraint firstAttribute="height" constant="60" id="tVA-co-lu0"/>
+                                    <constraint firstAttribute="height" constant="60" id="97A-Zn-TfQ"/>
+                                    <constraint firstAttribute="width" constant="80" id="RBG-15-mSd"/>
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OA7-wF-dIU">
-                                <rect key="frame" x="0.0" y="100" width="393" height="703"/>
+                                <rect key="frame" x="0.0" y="89" width="393" height="714"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MemoriesCell" rowHeight="460" id="FWd-GF-Tb3" customClass="MemoriesCell" customModule="Mola" customModuleProvider="target">
@@ -733,68 +733,83 @@
                                                 <constraint firstItem="mX5-z6-PWs" firstAttribute="trailing" secondItem="SOS-dT-E0Q" secondAttribute="trailingMargin" id="uiR-GK-OQO"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="contentLabel" destination="Zsp-TO-7Or" id="rlC-Wc-tzX"/>
+                                            <outlet property="dateLabel" destination="pHw-sU-L97" id="ubB-3e-gVL"/>
+                                            <outlet property="memoriesImageView" destination="mX5-z6-PWs" id="QhO-Lx-zWr"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K7y-39-6WD">
-                                <rect key="frame" x="321.33333333333331" y="53" width="55.666666666666686" height="34.333333333333343"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="307" y="29" width="70" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="Ia4-sw-Dgx"/>
+                                    <constraint firstAttribute="height" constant="60" id="d4c-iU-8wt"/>
+                                </constraints>
                                 <buttonConfiguration key="configuration" style="plain" image="camera.shutter.button" catalog="system"/>
                                 <connections>
-                                    <action selector="uploadMemoButton:" destination="e3D-0H-BnU" eventType="touchUpInside" id="jk3-pt-g2y"/>
+                                    <action selector="uploadMemoButton:" destination="e3D-0H-BnU" eventType="touchUpInside" id="DWF-M0-omC"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SmK-tr-BXD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="fip-aZ-Yau" firstAttribute="centerY" secondItem="K7y-39-6WD" secondAttribute="centerY" id="16i-Dr-Q7y"/>
-                            <constraint firstItem="OA7-wF-dIU" firstAttribute="trailing" secondItem="SmK-tr-BXD" secondAttribute="trailing" id="Sbn-CK-tIC"/>
-                            <constraint firstItem="SmK-tr-BXD" firstAttribute="trailing" secondItem="K7y-39-6WD" secondAttribute="trailing" constant="16" id="aBW-Wc-iVz"/>
-                            <constraint firstItem="OA7-wF-dIU" firstAttribute="bottom" secondItem="SmK-tr-BXD" secondAttribute="bottom" id="eqx-Zs-60X"/>
-                            <constraint firstItem="OA7-wF-dIU" firstAttribute="top" secondItem="fip-aZ-Yau" secondAttribute="bottom" id="irl-ET-WgG"/>
-                            <constraint firstItem="fip-aZ-Yau" firstAttribute="leading" secondItem="SmK-tr-BXD" secondAttribute="leading" constant="16" id="nFQ-D9-1sm"/>
-                            <constraint firstItem="OA7-wF-dIU" firstAttribute="leading" secondItem="SmK-tr-BXD" secondAttribute="leading" id="uNX-CI-iqW"/>
-                            <constraint firstItem="fip-aZ-Yau" firstAttribute="top" secondItem="PeE-dQ-yf6" secondAttribute="top" constant="40" id="uQU-Xz-Pzd"/>
+                            <constraint firstItem="fip-aZ-Yau" firstAttribute="centerY" secondItem="K7y-39-6WD" secondAttribute="centerY" id="6gY-Gi-zGk"/>
+                            <constraint firstItem="OA7-wF-dIU" firstAttribute="top" secondItem="fip-aZ-Yau" secondAttribute="bottom" id="A1O-G5-JGX"/>
+                            <constraint firstItem="OA7-wF-dIU" firstAttribute="bottom" secondItem="SmK-tr-BXD" secondAttribute="bottom" id="Jg1-nK-VTd"/>
+                            <constraint firstItem="SmK-tr-BXD" firstAttribute="trailing" secondItem="K7y-39-6WD" secondAttribute="trailing" constant="16" id="LYe-qW-nBb"/>
+                            <constraint firstItem="fip-aZ-Yau" firstAttribute="leading" secondItem="SmK-tr-BXD" secondAttribute="leading" constant="16" id="eQD-mb-ZC3"/>
+                            <constraint firstItem="OA7-wF-dIU" firstAttribute="leading" secondItem="SmK-tr-BXD" secondAttribute="leading" id="fwJ-Sd-zp8"/>
+                            <constraint firstItem="fip-aZ-Yau" firstAttribute="top" secondItem="SmK-tr-BXD" secondAttribute="top" constant="-15" id="xcC-Ci-ame"/>
+                            <constraint firstItem="OA7-wF-dIU" firstAttribute="trailing" secondItem="SmK-tr-BXD" secondAttribute="trailing" id="zbo-Xo-rFM"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="EK6-Af-Vgr"/>
+                    <connections>
+                        <outlet property="tableView" destination="OA7-wF-dIU" id="WPK-Hq-S0Q"/>
+                        <segue destination="Gd4-ML-GCJ" kind="show" identifier="toUploadMemoVC" id="cct-Ug-5gs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mSr-It-qgx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="69" y="1450"/>
+            <point key="canvasLocation" x="67.938931297709928" y="1450"/>
         </scene>
         <!--Memories UploadVC-->
         <scene sceneID="9A7-4u-kt2">
             <objects>
-                <viewController id="Gd4-ML-GCJ" customClass="MemoriesUploadVC" customModule="Mola" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemoriesUploadVC" id="Gd4-ML-GCJ" customClass="MemoriesUploadVC" customModule="Mola" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Iox-WG-pBP">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="memo" translatesAutoresizingMaskIntoConstraints="NO" id="Cfk-z3-X1s">
-                                <rect key="frame" x="16" y="144" width="360" height="300"/>
+                                <rect key="frame" x="16" y="129" width="360" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="GEA-q6-Rda"/>
                                     <constraint firstAttribute="width" constant="360" id="H1V-6l-jcu"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="molapng" translatesAutoresizingMaskIntoConstraints="NO" id="sgp-Sg-LVf">
-                                <rect key="frame" x="16" y="59" width="60" height="50"/>
+                                <rect key="frame" x="16" y="44" width="60" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="IFd-SM-zCw"/>
                                     <constraint firstAttribute="width" constant="60" id="V0j-QH-rVS"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Yorum giriniz..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yGe-OC-Oqq">
-                                <rect key="frame" x="16" y="460" width="361" height="34"/>
+                                <rect key="frame" x="16" y="445" width="361" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eyp-NZ-Nib">
-                                <rect key="frame" x="326" y="66.666666666666671" width="51" height="35"/>
+                                <rect key="frame" x="326" y="51.666666666666657" width="51" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="paperplane" catalog="system"/>
+                                <connections>
+                                    <action selector="sendButton:" destination="Gd4-ML-GCJ" eventType="touchUpInside" id="YWg-Ba-7gS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="det-vT-6gc"/>
@@ -812,6 +827,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wSj-Xk-IGl"/>
+                    <connections>
+                        <outlet property="clickImageView" destination="Cfk-z3-X1s" id="yuE-VW-D2L"/>
+                        <outlet property="contentText" destination="yGe-OC-Oqq" id="ign-ZP-2OX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NIm-mL-Og2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -968,7 +987,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EPy-cQ-dev" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2995" y="700"/>
+            <point key="canvasLocation" x="3921" y="700"/>
         </scene>
         <!--Notes-->
         <scene sceneID="MVt-ha-ZAI">
@@ -987,7 +1006,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fqk-8w-cka" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2021" y="700"/>
+            <point key="canvasLocation" x="2947" y="700"/>
         </scene>
         <!--Memories-->
         <scene sceneID="vnS-0h-acR">
@@ -1006,7 +1025,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qIi-nr-6s8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-894" y="1450"/>
+            <point key="canvasLocation" x="-992" y="1450"/>
         </scene>
     </scenes>
     <resources>

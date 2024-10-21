@@ -8,11 +8,16 @@
 import UIKit
 
 class MemoriesUploadVC: UIViewController {
-
+    @IBOutlet weak var clickImageView: UIImageView!
+    @IBOutlet weak var contentText: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func sendButton(_ sender: Any) {
+        
+    }
 }

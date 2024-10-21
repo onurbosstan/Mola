@@ -8,7 +8,10 @@
 import UIKit
 
 class MemoriesCell: UITableViewCell {
-
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var memoriesImageView: UIImageView!
+    @IBOutlet weak var contentLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

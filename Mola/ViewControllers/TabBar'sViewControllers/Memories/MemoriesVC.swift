@@ -8,15 +8,16 @@
 import UIKit
 
 class MemoriesVC: UIViewController {
-
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
     
     @IBAction func uploadMemoButton(_ sender: Any) {
-        
+        performSegue(withIdentifier: "toUploadMemoVC", sender: nil)
     }
     
 }

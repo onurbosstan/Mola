@@ -26,9 +26,13 @@ class NotesVC: UIViewController, UISearchBarDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        AnimationHelper.showActivityIndicator(animationName: "loading")
         viewModel.loadNotes { [weak self] in
-        self?.filteredNotes = self?.viewModel.notes ?? []
-        self?.tableView.reloadData()
+            DispatchQueue.main.async {
+                AnimationHelper.hideActivityIndicator()
+                self?.filteredNotes = self?.viewModel.notes ?? []
+                self?.tableView.reloadData()
+            }
         }
     }
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {

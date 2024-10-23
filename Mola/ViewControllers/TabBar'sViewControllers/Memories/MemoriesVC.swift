@@ -17,8 +17,10 @@ class MemoriesVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
+        AnimationHelper.showActivityIndicator(animationName: "loading")
         viewModel.fetchMemories { [weak self] in
             DispatchQueue.main.async {
+                AnimationHelper.hideActivityIndicator()
                 self?.tableView.reloadData()
             }
         }

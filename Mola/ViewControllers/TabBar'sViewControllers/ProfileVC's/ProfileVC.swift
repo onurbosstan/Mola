@@ -12,8 +12,9 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var viewModel = ProfileViewModel()
     let menuOptions: [[(title: String, image: String, bgColor: UIColor, iconColor: UIColor)]] = [ [
-            (title: "Change E-Mail Address", image: "envelope.circle", bgColor: .gray ,iconColor: .white),
-            (title: "Change Password", image: "lock.fill", bgColor: UIColor(red: 1.0, green: 0.8, blue: 0.0, alpha: 1.0), iconColor: .white),
+            (title: "Email Değiştir", image: "envelope.circle", bgColor: .gray ,iconColor: .white),
+            (title: "Şifre Değiştir", image: "lock.fill", bgColor: UIColor(red: 1.0, green: 0.8, blue: 0.0, alpha: 1.0), iconColor: .white),
+            (title: "Gizlilik Politikamız", image: "newspaper.fill", bgColor: UIColor(red: 1.0, green: 0.8, blue: 1.0, alpha: 1.0), iconColor: .white),
             (title: "Logout", image: "rectangle.portrait.and.arrow.right", bgColor: .red, iconColor: .white)]]
     
     override func viewDidLoad() {
@@ -52,6 +53,8 @@ extension ProfileVC: UITableViewDataSource, UITableViewDelegate {
         case 1:
             self.performSegue(withIdentifier: "toChangePassword", sender: nil)
         case 2:
+            self.performSegue(withIdentifier: "toPrivacyVC", sender: nil)
+        case 3:
             viewModel.logOut()
         default:
             break

@@ -412,7 +412,7 @@
             </objects>
             <point key="canvasLocation" x="2947.3282442748091" y="1450"/>
         </scene>
-        <!--Profile-->
+        <!--ProfileVC-->
         <scene sceneID="vsP-i1-Op2">
             <objects>
                 <viewController storyboardIdentifier="ProfileVC" id="mrA-9e-feu" customClass="ProfileVC" customModule="Mola" customModuleProvider="target" sceneMemberID="viewController">
@@ -485,11 +485,12 @@
                             <constraint firstItem="rQE-fZ-SoD" firstAttribute="top" secondItem="OQz-eS-Pl1" secondAttribute="top" id="YWQ-pN-9v9"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Profile" id="Nnq-mV-bQ8"/>
+                    <navigationItem key="navigationItem" id="Nnq-mV-bQ8"/>
                     <connections>
                         <outlet property="tableView" destination="rQE-fZ-SoD" id="6Uc-SV-Adp"/>
                         <segue destination="40v-eU-2Vz" kind="show" identifier="toChangePassword" id="VFX-bd-Wlb"/>
                         <segue destination="z0V-yf-H9x" kind="show" identifier="toChangeEmail" id="2kH-EV-9co"/>
+                        <segue destination="89m-h7-tmb" kind="show" identifier="toPrivacyVC" id="wcq-Yh-YhE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JVh-Pn-L7r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -674,6 +675,56 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ccm-Hk-sN8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5397.7099236641216" y="1450"/>
+        </scene>
+        <!--PrivacyVC-->
+        <scene sceneID="QnW-H5-Whd">
+            <objects>
+                <viewController id="89m-h7-tmb" customClass="PrivacyVC" customModule="Mola" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QHg-Pg-u49">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6AF-ZK-neP">
+                                <rect key="frame" x="0.0" y="44" width="393" height="759"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Qd1-hT-cku">
+                                        <rect key="frame" x="8" y="8" width="377" height="732"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="732" id="bJg-4B-upd"/>
+                                        </constraints>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Qd1-hT-cku" firstAttribute="leading" secondItem="6AF-ZK-neP" secondAttribute="leadingMargin" id="2EX-Tc-igZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="Qd1-hT-cku" secondAttribute="bottom" constant="19" id="6OM-hD-5mc"/>
+                                    <constraint firstItem="Qd1-hT-cku" firstAttribute="top" secondItem="6AF-ZK-neP" secondAttribute="topMargin" id="mgD-YH-dkk"/>
+                                    <constraint firstItem="Qd1-hT-cku" firstAttribute="centerX" secondItem="6AF-ZK-neP" secondAttribute="centerX" id="q5O-wZ-z6B"/>
+                                    <constraint firstItem="Qd1-hT-cku" firstAttribute="trailing" secondItem="6AF-ZK-neP" secondAttribute="trailingMargin" id="vna-Ba-RG0"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hGR-S8-bUX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6AF-ZK-neP" firstAttribute="top" secondItem="hGR-S8-bUX" secondAttribute="top" id="V40-ub-4FH"/>
+                            <constraint firstItem="hGR-S8-bUX" firstAttribute="trailing" secondItem="6AF-ZK-neP" secondAttribute="trailing" id="ldm-Qq-Q1G"/>
+                            <constraint firstItem="6AF-ZK-neP" firstAttribute="leading" secondItem="hGR-S8-bUX" secondAttribute="leading" id="ntx-Qb-Pc4"/>
+                            <constraint firstItem="hGR-S8-bUX" firstAttribute="bottom" secondItem="6AF-ZK-neP" secondAttribute="bottom" id="p8e-wD-Qjm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="BMf-9Z-ALl"/>
+                    <connections>
+                        <outlet property="privacyTextView" destination="Qd1-hT-cku" id="S6t-TX-5YV"/>
+                        <outlet property="scrollView" destination="6AF-ZK-neP" id="x2V-TX-xhM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f5s-v3-nAW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6154.9618320610689" y="1450"/>
         </scene>
         <!--MemoriesVC-->
         <scene sceneID="Q51-qY-ZYo">

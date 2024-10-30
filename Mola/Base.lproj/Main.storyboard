@@ -412,7 +412,7 @@
             </objects>
             <point key="canvasLocation" x="2947.3282442748091" y="1450"/>
         </scene>
-        <!--ProfileVC-->
+        <!--Profilim-->
         <scene sceneID="vsP-i1-Op2">
             <objects>
                 <viewController storyboardIdentifier="ProfileVC" id="mrA-9e-feu" customClass="ProfileVC" customModule="Mola" customModuleProvider="target" sceneMemberID="viewController">
@@ -485,7 +485,7 @@
                             <constraint firstItem="rQE-fZ-SoD" firstAttribute="top" secondItem="OQz-eS-Pl1" secondAttribute="top" id="YWQ-pN-9v9"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Nnq-mV-bQ8"/>
+                    <navigationItem key="navigationItem" title="Profilim" id="Nnq-mV-bQ8"/>
                     <connections>
                         <outlet property="tableView" destination="rQE-fZ-SoD" id="6Uc-SV-Adp"/>
                         <segue destination="40v-eU-2Vz" kind="show" identifier="toChangePassword" id="VFX-bd-Wlb"/>

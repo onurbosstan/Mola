@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C6168A962CC45D0C006A9C60 /* MemoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6168A952CC45D0C006A9C60 /* MemoriesCell.swift */; };
+		C6190A7E2CD42957001C2C4D /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6190A7D2CD42957001C2C4D /* CustomTabBarController.swift */; };
 		C65D9F392CB454B5007A6580 /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65D9F382CB454B5007A6580 /* LogInViewModel.swift */; };
 		C65D9F3B2CB4550C007A6580 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65D9F3A2CB4550C007A6580 /* RegisterViewModel.swift */; };
 		C65D9F3D2CB45588007A6580 /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65D9F3C2CB45588007A6580 /* ForgotPasswordViewModel.swift */; };
@@ -58,6 +59,7 @@
 
 /* Begin PBXFileReference section */
 		C6168A952CC45D0C006A9C60 /* MemoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesCell.swift; sourceTree = "<group>"; };
+		C6190A7D2CD42957001C2C4D /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		C65D9F382CB454B5007A6580 /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
 		C65D9F3A2CB4550C007A6580 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		C65D9F3C2CB45588007A6580 /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
@@ -369,6 +371,7 @@
 		C6FCCC8E2CB7D3B500C4DEC8 /* TabBar'sViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C6190A7D2CD42957001C2C4D /* CustomTabBarController.swift */,
 				C6F8E6632CBD934700D1A7E4 /* Memories */,
 				C6F8E6642CBD934D00D1A7E4 /* Calendar */,
 				C6F8E6652CBD935700D1A7E4 /* Home */,
@@ -513,6 +516,7 @@
 				C65D9F3D2CB45588007A6580 /* ForgotPasswordViewModel.swift in Sources */,
 				C6F8E6752CBE8A9E00D1A7E4 /* Note.swift in Sources */,
 				C6B494B52CBAA2FA004ADF01 /* ChangeEmailViewModel.swift in Sources */,
+				C6190A7E2CD42957001C2C4D /* CustomTabBarController.swift in Sources */,
 				C6F8E6722CBD967B00D1A7E4 /* NotesCell.swift in Sources */,
 				C6B494B12CBA7F54004ADF01 /* ChangePasswordViewModel.swift in Sources */,
 				C6FCCCA62CB7D54000C4DEC8 /* ProfileViewModel.swift in Sources */,

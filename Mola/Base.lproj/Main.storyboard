@@ -915,10 +915,10 @@
             </objects>
             <point key="canvasLocation" x="68" y="2184"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Custom Tab Bar Controller-->
         <scene sceneID="4fi-90-SGP">
             <objects>
-                <tabBarController storyboardIdentifier="tabBar" id="ToJ-nE-Hko" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBar" id="ToJ-nE-Hko" customClass="CustomTabBarController" customModule="Mola" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="quK-Sb-dgL"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bgd-f4-ep6">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>

@@ -47,4 +47,10 @@ class NotesViewModel {
             }
         }
     }
+    func getNotes(for date: Date) -> [Note] {
+            let calendar = Calendar.current
+            return notes.filter {
+                calendar.isDate($0.date, inSameDayAs: date)
+            }
+        }
 }

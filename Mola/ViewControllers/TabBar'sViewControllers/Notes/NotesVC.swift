@@ -14,7 +14,9 @@ class NotesVC: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var searchBar: UISearchBar!
     var viewModel = NotesViewModel()
     var filteredNotes: [Note] = []
+    var selectedDate: Date?
     var isSearching: Bool = false
+    var isFiltered: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +32,11 @@ class NotesVC: UIViewController, UISearchBarDelegate {
         viewModel.loadNotes { [weak self] in
             DispatchQueue.main.async {
                 AnimationHelper.hideActivityIndicator()
-                self?.filteredNotes = self?.viewModel.notes ?? []
+                if let isFiltered = self?.isFiltered, isFiltered, let date = self?.selectedDate {
+                    self?.filteredNotes = self?.viewModel.getNotes(for: date) ?? []
+                } else {
+                    self?.filteredNotes = self?.viewModel.notes ?? []
+                }
                 self?.tableView.reloadData()
             }
         }
@@ -61,14 +67,14 @@ class NotesVC: UIViewController, UISearchBarDelegate {
 }
 extension NotesVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return isSearching ? filteredNotes.count : viewModel.notes.count
+        return filteredNotes.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NotesCell", for: indexPath) as! NotesCell
-         let note = isSearching ? filteredNotes[indexPath.row] : viewModel.notes[indexPath.row]
-         cell.contentLabel.text = note.content
-         return cell
-    }
+        let note = filteredNotes[indexPath.row]
+        cell.contentLabel.text = note.content
+        return cell
+}
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedNote = isSearching ? filteredNotes[indexPath.row] : viewModel.notes[indexPath.row]
         performSegue(withIdentifier: "toDetailVC", sender: selectedNote)

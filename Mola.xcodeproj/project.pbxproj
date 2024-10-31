@@ -51,7 +51,6 @@
 		C6FCCC962CB7D49C00C4DEC8 /* NotesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FCCC952CB7D49C00C4DEC8 /* NotesVC.swift */; };
 		C6FCCC982CB7D4A600C4DEC8 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FCCC972CB7D4A600C4DEC8 /* ProfileVC.swift */; };
 		C6FCCC9C2CB7D4DE00C4DEC8 /* MemoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FCCC9B2CB7D4DE00C4DEC8 /* MemoriesViewModel.swift */; };
-		C6FCCCA02CB7D51F00C4DEC8 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FCCC9F2CB7D51F00C4DEC8 /* CalendarViewModel.swift */; };
 		C6FCCCA22CB7D52900C4DEC8 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FCCCA12CB7D52900C4DEC8 /* HomeViewModel.swift */; };
 		C6FCCCA42CB7D53400C4DEC8 /* NotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FCCCA32CB7D53400C4DEC8 /* NotesViewModel.swift */; };
 		C6FCCCA62CB7D54000C4DEC8 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FCCCA52CB7D54000C4DEC8 /* ProfileViewModel.swift */; };
@@ -97,7 +96,6 @@
 		C6FCCC952CB7D49C00C4DEC8 /* NotesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesVC.swift; sourceTree = "<group>"; };
 		C6FCCC972CB7D4A600C4DEC8 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		C6FCCC9B2CB7D4DE00C4DEC8 /* MemoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesViewModel.swift; sourceTree = "<group>"; };
-		C6FCCC9F2CB7D51F00C4DEC8 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 		C6FCCCA12CB7D52900C4DEC8 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		C6FCCCA32CB7D53400C4DEC8 /* NotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewModel.swift; sourceTree = "<group>"; };
 		C6FCCCA52CB7D54000C4DEC8 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
@@ -327,14 +325,6 @@
 			path = MemoriesVM;
 			sourceTree = "<group>";
 		};
-		C6F8E6682CBD937800D1A7E4 /* CalendarVM */ = {
-			isa = PBXGroup;
-			children = (
-				C6FCCC9F2CB7D51F00C4DEC8 /* CalendarViewModel.swift */,
-			);
-			path = CalendarVM;
-			sourceTree = "<group>";
-		};
 		C6F8E6692CBD938200D1A7E4 /* HomeVM */ = {
 			isa = PBXGroup;
 			children = (
@@ -402,7 +392,6 @@
 			isa = PBXGroup;
 			children = (
 				C6F8E6672CBD937000D1A7E4 /* MemoriesVM */,
-				C6F8E6682CBD937800D1A7E4 /* CalendarVM */,
 				C6F8E6692CBD938200D1A7E4 /* HomeVM */,
 				C6F8E66A2CBD939000D1A7E4 /* NotesVM */,
 				C6CEABA62CB9326E008B4B06 /* ProfileViewModel */,
@@ -516,7 +505,6 @@
 				C6F8E66C2CBD93C400D1A7E4 /* NoteDetailsVC.swift in Sources */,
 				C65D9F392CB454B5007A6580 /* LogInViewModel.swift in Sources */,
 				C6FCCC902CB7D3D600C4DEC8 /* MemoriesVC.swift in Sources */,
-				C6FCCCA02CB7D51F00C4DEC8 /* CalendarViewModel.swift in Sources */,
 				C6E12A282CAEE16D0066FA48 /* Users.swift in Sources */,
 				C6B515182CC6D1AE00EE78E7 /* Memories.swift in Sources */,
 				C6B7CA602CC913C500A21DDE /* AnimationHelper.swift in Sources */,

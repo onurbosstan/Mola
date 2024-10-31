@@ -23,7 +23,7 @@ class MemoriesViewModel {
             }
             self.memories = snapshot?.documents.compactMap { doc in
                 let data = doc.data()
-                let date = (data["date"] as? Timestamp)?.dateValue().description ?? ""
+                let date = (data["date"] as? Timestamp)?.dateValue() ?? Date()
                 let comment = data["comment"] as? String ?? ""
                 let imageURL = data["imageURL"] as? String ?? ""
                 let documentID = doc.documentID

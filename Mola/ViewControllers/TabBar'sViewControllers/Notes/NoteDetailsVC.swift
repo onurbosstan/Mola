@@ -16,13 +16,16 @@ class NoteDetailsVC: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         if let note = viewModel.note {
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateStyle = .medium
-            dateFormatter.timeStyle = .short
-            dateLabel.text = dateFormatter.string(from: note.date)
-            contentsTextView.text = note.content
-        }
-        contentsTextView.delegate = self
+                    let dateFormatter = DateFormatter()
+                    dateFormatter.dateStyle = .medium
+                    dateFormatter.timeStyle = .short
+                    dateFormatter.locale = Locale.current
+                    dateFormatter.timeZone = TimeZone.current
+                    
+                    dateLabel.text = dateFormatter.string(from: note.date)
+                    contentsTextView.text = note.content
+                }
+                contentsTextView.delegate = self
     }
     func textViewDidChange(_ textView: UITextView) {
         guard let updatedContent = textView.text else { return }

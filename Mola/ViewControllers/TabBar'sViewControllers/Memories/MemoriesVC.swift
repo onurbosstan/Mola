@@ -36,7 +36,6 @@ class MemoriesVC: UIViewController {
     @IBAction func uploadMemoButton(_ sender: Any) {
         performSegue(withIdentifier: "toUploadMemoVC", sender: nil)
     }
-    
 }
 extension MemoriesVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -45,7 +44,13 @@ extension MemoriesVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MemoriesCell", for: indexPath) as! MemoriesCell
         let memory = viewModel.memories[indexPath.row]
-        cell.dateLabel.text = memory.date
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .short
+        dateFormatter.locale = Locale.current
+        dateFormatter.timeZone = TimeZone.current
+        cell.dateLabel.text = dateFormatter.string(from: memory.date)
         cell.contentLabel.text = memory.comment
         
         if let url = URL(string: memory.imageURL) {
@@ -56,9 +61,9 @@ extension MemoriesVC: UITableViewDelegate, UITableViewDataSource {
                     }
                 }
             }
-            cell.deleteAction = { [weak self] in
-                self?.presentDeleteAlert(for: memory, at: indexPath)
-            }
+        }
+        cell.deleteAction = { [weak self] in
+            self?.presentDeleteAlert(for: memory, at: indexPath)
         }
         return cell
     }
@@ -67,15 +72,12 @@ extension MemoriesVC: UITableViewDelegate, UITableViewDataSource {
     }
     func presentDeleteAlert(for memory: Memories, at indexPath: IndexPath) {
         let alert = UIAlertController(title: "Sil", message: "Bu anıyı silmek istediğinizden emin misiniz?", preferredStyle: .alert)
-        
         let deleteAction = UIAlertAction(title: "Sil", style: .destructive) { _ in
             self.deleteMemory(memory, at: indexPath)
         }
         let cancelAction = UIAlertAction(title: "Vazgeç", style: .cancel, handler: nil)
-        
         alert.addAction(deleteAction)
         alert.addAction(cancelAction)
-        
         self.present(alert, animated: true, completion: nil)
     }
     func deleteMemory(_ memory: Memories, at indexPath: IndexPath) {

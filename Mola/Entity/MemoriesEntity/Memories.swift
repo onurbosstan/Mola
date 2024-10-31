@@ -8,7 +8,7 @@
 import Foundation
 
 struct Memories {
-    let date: String
+    let date: Date
     let comment: String
     let imageURL: String
     let documentID: String

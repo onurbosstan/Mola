@@ -130,7 +130,7 @@ extension NotesVC: UITableViewDataSource, UITableViewDelegate {
             }
             completionHandler(true)
         }
-        pinAction.backgroundColor = UIColor.systemGray3
+        pinAction.backgroundColor = UIColor.systemYellow
         return UISwipeActionsConfiguration(actions: [pinAction])
         }
         

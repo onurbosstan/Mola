@@ -11,4 +11,5 @@ struct Note {
     let id: String
     let content: String
     let date: Date
+    var isPinned: Bool
 }

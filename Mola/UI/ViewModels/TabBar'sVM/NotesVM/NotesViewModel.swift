@@ -31,7 +31,8 @@ class NotesViewModel {
                         let content = data["content"] as? String ?? ""
                         let date = (data["date"] as? Timestamp)?.dateValue() ?? Date()
                         let id = doc.documentID
-                        return Note(id: id, content: content, date: date)
+                        let isPinned = data["isPinned"] as? Bool ?? false
+                        return Note(id: id, content: content, date: date, isPinned: isPinned)
                     } ?? []
                     completion()
                 }
@@ -53,4 +54,20 @@ class NotesViewModel {
                 calendar.isDate($0.date, inSameDayAs: date)
             }
         }
+    func togglePin(for note: Note, completion: @escaping (Bool) -> Void) {
+            let noteRef = db.collection("notes").document(note.id)
+            let newPinStatus = !note.isPinned
+
+            noteRef.updateData(["isPinned": newPinStatus]) { error in
+                if let error = error {
+                    print("Error updating pin status: \(error)")
+                    completion(false)
+                } else {
+                    if let index = self.notes.firstIndex(where: { $0.id == note.id }) {
+                        self.notes[index].isPinned = newPinStatus
+                }
+                completion(true)
+            }
+        }
+    }
 }

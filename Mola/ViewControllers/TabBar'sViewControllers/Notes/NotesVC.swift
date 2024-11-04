@@ -66,15 +66,37 @@ class NotesVC: UIViewController, UISearchBarDelegate {
     
 }
 extension NotesVC: UITableViewDataSource, UITableViewDelegate {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return filteredNotes.count
+        if section == 0 {
+            return filteredNotes.filter { $0.isPinned }.count
+        } else {
+            return filteredNotes.filter { !$0.isPinned }.count
+        }
+    }
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 && !filteredNotes.filter({ $0.isPinned }).isEmpty {
+            return "İğnelenmiş"
+        } else if section == 1 {
+            return "Notlar"
+        }
+        return nil
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NotesCell", for: indexPath) as! NotesCell
-        let note = filteredNotes[indexPath.row]
+        let note: Note
+        if indexPath.section == 0 {
+            note = filteredNotes.filter { $0.isPinned }[indexPath.row]
+        } else {
+            note = filteredNotes.filter { !$0.isPinned }[indexPath.row]
+        }
         cell.contentLabel.text = note.content
         return cell
-}
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedNote = isSearching ? filteredNotes[indexPath.row] : viewModel.notes[indexPath.row]
         performSegue(withIdentifier: "toDetailVC", sender: selectedNote)
@@ -90,20 +112,46 @@ extension NotesVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 75
     }
-    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-        return .delete
-    }
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let pinAction = UIContextualAction(style: .normal, title: "İğnele") { [weak self] (action, view, completionHandler) in
+            guard let self = self else { return }
+            var note: Note
+            if indexPath.section == 0 {
+                note = self.filteredNotes.filter { $0.isPinned }[indexPath.row]
+            } else {
+                note = self.filteredNotes.filter { !$0.isPinned }[indexPath.row]
+            }
+            self.viewModel.togglePin(for: note) { success in
+                if success {
+                    note.isPinned.toggle()
+                    self.filteredNotes = self.viewModel.notes
+                    self.tableView.reloadData()
+                }
+            }
+            completionHandler(true)
+        }
+        pinAction.backgroundColor = UIColor.systemGray3
+        return UISwipeActionsConfiguration(actions: [pinAction])
+        }
+        
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: "Sil") { [weak self] (action, view, completionHandler) in
+            guard let self = self else { return }
+            let note: Note
+            if indexPath.section == 0 {
+                note = self.filteredNotes.filter { $0.isPinned }[indexPath.row]
+            } else {
+                note = self.filteredNotes.filter { !$0.isPinned }[indexPath.row]
+            }
+                
             let alert = UIAlertController(title: "Notu sil", message: "Bu notu silmek istediğinizden emin misiniz?", preferredStyle: .alert)
-            let deleteAction = UIAlertAction(title: "Sil", style: .destructive) { _ in
-                let noteToDelete = self.isSearching ? self.filteredNotes[indexPath.row] : self.viewModel.notes[indexPath.row]
-                self.viewModel.deleteNote(note: noteToDelete) { success in
+            let deleteAlertAction = UIAlertAction(title: "Sil", style: .destructive) { _ in
+                self.viewModel.deleteNote(note: note) { success in
                     if success {
-                        if let index = self.viewModel.notes.firstIndex(where: { $0.id == noteToDelete.id }) {
+                        if let index = self.viewModel.notes.firstIndex(where: { $0.id == note.id }) {
                             self.viewModel.notes.remove(at: index)
                         }
-                        self.filteredNotes.remove(at: indexPath.row)
+                        self.filteredNotes.removeAll(where: { $0.id == note.id })
                         tableView.deleteRows(at: [indexPath], with: .automatic)
                     } else {
                         self.showErrorAlert(message: "Not silinirken bir hata oluştu.")
@@ -111,11 +159,14 @@ extension NotesVC: UITableViewDataSource, UITableViewDelegate {
                 }
             }
             let cancelAction = UIAlertAction(title: "Vazgeç", style: .cancel, handler: nil)
-            alert.addAction(deleteAction)
+            alert.addAction(deleteAlertAction)
             alert.addAction(cancelAction)
             self.present(alert, animated: true, completion: nil)
+            completionHandler(true)
         }
-        }
+        return UISwipeActionsConfiguration(actions: [deleteAction])
+    }
+    
     func showErrorAlert(message: String) {
         let alert = UIAlertController(title: "Hata", message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Tamam", style: .default, handler: nil)

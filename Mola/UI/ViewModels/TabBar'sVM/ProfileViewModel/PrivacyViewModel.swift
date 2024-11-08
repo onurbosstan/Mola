@@ -15,7 +15,7 @@ class PrivacyViewModel {
         """
         
         let privacyPolicyText2 = """
-            Bizimle paylaştığınız kişisel verileriniz yalnızca sunduğumuz hizmetlerin gerekliliklerini en iyi şekilde yerine getirebilmek, bu hizmetlerin size en üst düzeyde erişilebilmesini ve kullanılabilmesini sağlamak, hizmetlerimizi ihtiyaçlarınıza uygun şekilde geliştirmek ve sizi yasal çerçeveler içinde daha geniş hizmet sağlayıcılarla buluşturmak amacıyla işlenecek ve güncellenecektir. Kişisel verileriniz, sözleşme ve hizmet süresi boyunca amaca uygun ve orantılı bir şekilde işlenecektir.
+        Bizimle paylaştığınız kişisel verileriniz yalnızca sunduğumuz hizmetlerin gerekliliklerini en iyi şekilde yerine getirebilmek, bu hizmetlerin size en üst düzeyde erişilebilmesini ve kullanılabilmesini sağlamak, hizmetlerimizi ihtiyaçlarınıza uygun şekilde geliştirmek ve sizi yasal çerçeveler içinde daha geniş hizmet sağlayıcılarla buluşturmak amacıyla işlenecek ve güncellenecektir. Kişisel verileriniz, sözleşme ve hizmet süresi boyunca amaca uygun ve orantılı bir şekilde işlenecektir.
         """
         
         let privacyPolicyText3 = """

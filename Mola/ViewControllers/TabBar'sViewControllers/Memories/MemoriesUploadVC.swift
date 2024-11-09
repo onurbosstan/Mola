@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseFirestore
+import CropViewController
 
-class MemoriesUploadVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class MemoriesUploadVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CropViewControllerDelegate {
     @IBOutlet weak var clickImageView: UIImageView!
     @IBOutlet weak var contentText: UITextField!
     var viewModel = MemoriesUploadViewModel()
@@ -51,12 +54,22 @@ class MemoriesUploadVC: UIViewController, UIImagePickerControllerDelegate, UINav
         imagePicker.sourceType = .photoLibrary
         self.present(imagePicker, animated: true, completion: nil)
     }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[.originalImage] as? UIImage {
-            clickImageView.image = image
-            selectedImage = image
+            picker.dismiss(animated: true) {
+                let cropViewController = CropViewController(image: image)
+                cropViewController.delegate = self
+                self.present(cropViewController, animated: true, completion: nil)
+            }
+        } else {
+            picker.dismiss(animated: true, completion: nil)
         }
-        picker.dismiss(animated: true, completion: nil)
+    }
+    func cropViewController(_ cropViewController: CropViewController, didCropToImage image: UIImage, withRect cropRect: CGRect, angle: Int) {
+        cropViewController.dismiss(animated: true, completion: nil)
+        clickImageView.image = image
+        selectedImage = image
     }
     
     @IBAction func sendButton(_ sender: Any) {

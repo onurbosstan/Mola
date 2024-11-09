@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		C6168A962CC45D0C006A9C60 /* MemoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6168A952CC45D0C006A9C60 /* MemoriesCell.swift */; };
 		C6190A7E2CD42957001C2C4D /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6190A7D2CD42957001C2C4D /* CustomTabBarController.swift */; };
+		C625D99D2CDFBC9E00377F87 /* CropViewController in Frameworks */ = {isa = PBXBuildFile; productRef = C625D99C2CDFBC9E00377F87 /* CropViewController */; };
+		C625D99F2CDFBC9E00377F87 /* TOCropViewController in Frameworks */ = {isa = PBXBuildFile; productRef = C625D99E2CDFBC9E00377F87 /* TOCropViewController */; };
 		C65D9F392CB454B5007A6580 /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65D9F382CB454B5007A6580 /* LogInViewModel.swift */; };
 		C65D9F3B2CB4550C007A6580 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65D9F3A2CB4550C007A6580 /* RegisterViewModel.swift */; };
 		C65D9F3D2CB45588007A6580 /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65D9F3C2CB45588007A6580 /* ForgotPasswordViewModel.swift */; };
@@ -109,10 +111,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C684DDCD2CAEA62D0053B291 /* FirebaseDatabase in Frameworks */,
+				C625D99F2CDFBC9E00377F87 /* TOCropViewController in Frameworks */,
 				C684DDCF2CAEA62D0053B291 /* FirebaseFirestore in Frameworks */,
 				C684DDCB2CAEA62D0053B291 /* FirebaseCore in Frameworks */,
 				C684DDD12CAEA62D0053B291 /* FirebaseStorage in Frameworks */,
 				C684DDC92CAEA62D0053B291 /* FirebaseAuth in Frameworks */,
+				C625D99D2CDFBC9E00377F87 /* CropViewController in Frameworks */,
 				C6746EC12CCFDFA700A6B751 /* FSCalendar in Frameworks */,
 				C6B7CA5E2CC913B800A21DDE /* Lottie in Frameworks */,
 			);
@@ -426,6 +430,8 @@
 				C684DDD02CAEA62D0053B291 /* FirebaseStorage */,
 				C6B7CA5D2CC913B800A21DDE /* Lottie */,
 				C6746EC02CCFDFA700A6B751 /* FSCalendar */,
+				C625D99C2CDFBC9E00377F87 /* CropViewController */,
+				C625D99E2CDFBC9E00377F87 /* TOCropViewController */,
 			);
 			productName = Mola;
 			productReference = C684DDB32CAD665D0053B291 /* Mola.app */;
@@ -459,6 +465,7 @@
 				C684DDC72CAEA62D0053B291 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				C6B7CA5C2CC913B800A21DDE /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				C6746EBF2CCFDFA700A6B751 /* XCRemoteSwiftPackageReference "FSCalendar" */,
+				C625D99B2CDFBC9E00377F87 /* XCRemoteSwiftPackageReference "TOCropViewController" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C684DD422CAD641F0053B291;
@@ -750,6 +757,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C625D99B2CDFBC9E00377F87 /* XCRemoteSwiftPackageReference "TOCropViewController" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/TimOliver/TOCropViewController";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.4;
+			};
+		};
 		C6746EBF2CCFDFA700A6B751 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/WenchaoD/FSCalendar";
@@ -777,6 +792,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C625D99C2CDFBC9E00377F87 /* CropViewController */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C625D99B2CDFBC9E00377F87 /* XCRemoteSwiftPackageReference "TOCropViewController" */;
+			productName = CropViewController;
+		};
+		C625D99E2CDFBC9E00377F87 /* TOCropViewController */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C625D99B2CDFBC9E00377F87 /* XCRemoteSwiftPackageReference "TOCropViewController" */;
+			productName = TOCropViewController;
+		};
 		C6746EC02CCFDFA700A6B751 /* FSCalendar */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C6746EBF2CCFDFA700A6B751 /* XCRemoteSwiftPackageReference "FSCalendar" */;

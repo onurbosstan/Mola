@@ -43,6 +43,8 @@
 		C6CEABA52CB92DCC008B4B06 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CEABA42CB92DCC008B4B06 /* ProfileCell.swift */; };
 		C6D556392CC46406003BB8B7 /* MemoriesUploadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D556382CC46406003BB8B7 /* MemoriesUploadVC.swift */; };
 		C6DA9AF12CE280F00058C5AF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6DA9AF02CE280F00058C5AF /* GoogleService-Info.plist */; };
+		C6DA9AF42CE2B4000058C5AF /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = C6DA9AF32CE2B4000058C5AF /* GoogleSignIn */; };
+		C6DA9AF62CE2B4000058C5AF /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C6DA9AF52CE2B4000058C5AF /* GoogleSignInSwift */; };
 		C6E12A282CAEE16D0066FA48 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E12A272CAEE16D0066FA48 /* Users.swift */; };
 		C6F8E66C2CBD93C400D1A7E4 /* NoteDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F8E66B2CBD93C400D1A7E4 /* NoteDetailsVC.swift */; };
 		C6F8E66E2CBD93DF00D1A7E4 /* NoteDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F8E66D2CBD93DF00D1A7E4 /* NoteDetailsViewModel.swift */; };
@@ -115,10 +117,12 @@
 				C684DDCF2CAEA62D0053B291 /* FirebaseFirestore in Frameworks */,
 				C684DDCB2CAEA62D0053B291 /* FirebaseCore in Frameworks */,
 				C684DDD12CAEA62D0053B291 /* FirebaseStorage in Frameworks */,
+				C6DA9AF42CE2B4000058C5AF /* GoogleSignIn in Frameworks */,
 				C684DDC92CAEA62D0053B291 /* FirebaseAuth in Frameworks */,
 				C625D99D2CDFBC9E00377F87 /* CropViewController in Frameworks */,
 				C6746EC12CCFDFA700A6B751 /* FSCalendar in Frameworks */,
 				C6B7CA5E2CC913B800A21DDE /* Lottie in Frameworks */,
+				C6DA9AF62CE2B4000058C5AF /* GoogleSignInSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +436,8 @@
 				C6746EC02CCFDFA700A6B751 /* FSCalendar */,
 				C625D99C2CDFBC9E00377F87 /* CropViewController */,
 				C625D99E2CDFBC9E00377F87 /* TOCropViewController */,
+				C6DA9AF32CE2B4000058C5AF /* GoogleSignIn */,
+				C6DA9AF52CE2B4000058C5AF /* GoogleSignInSwift */,
 			);
 			productName = Mola;
 			productReference = C684DDB32CAD665D0053B291 /* Mola.app */;
@@ -466,6 +472,7 @@
 				C6B7CA5C2CC913B800A21DDE /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				C6746EBF2CCFDFA700A6B751 /* XCRemoteSwiftPackageReference "FSCalendar" */,
 				C625D99B2CDFBC9E00377F87 /* XCRemoteSwiftPackageReference "TOCropViewController" */,
+				C6DA9AF22CE2B4000058C5AF /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C684DD422CAD641F0053B291;
@@ -789,6 +796,14 @@
 				minimumVersion = 4.5.0;
 			};
 		};
+		C6DA9AF22CE2B4000058C5AF /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -836,6 +851,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C6B7CA5C2CC913B800A21DDE /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
+		};
+		C6DA9AF32CE2B4000058C5AF /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C6DA9AF22CE2B4000058C5AF /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		C6DA9AF52CE2B4000058C5AF /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C6DA9AF22CE2B4000058C5AF /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

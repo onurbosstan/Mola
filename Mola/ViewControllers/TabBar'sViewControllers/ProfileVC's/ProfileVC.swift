@@ -15,7 +15,7 @@ class ProfileVC: UIViewController {
             (title: "Email Değiştir", image: "envelope.circle", bgColor: .gray ,iconColor: .white),
             (title: "Şifre Değiştir", image: "lock.fill", bgColor: UIColor(red: 1.0, green: 0.8, blue: 0.0, alpha: 1.0), iconColor: .white),
             (title: "Gizlilik Politikamız", image: "newspaper.fill", bgColor: UIColor(red: 0.1, green: 0.1, blue: 1.0, alpha: 0.5), iconColor: .white),
-            (title: "Logout", image: "rectangle.portrait.and.arrow.right", bgColor: .red, iconColor: .white)]]
+            (title: "Çıkış Yap", image: "rectangle.portrait.and.arrow.right", bgColor: .red, iconColor: .white)]]
     
     override func viewDidLoad() {
         super.viewDidLoad()

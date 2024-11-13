@@ -58,6 +58,28 @@ class UserProcesses {
             completion(nil)
         }
     }
+    func deleteAccount(password: String, completion: @escaping (Bool) -> Void) {
+        guard let user = Auth.auth().currentUser, let email = user.email else {
+            completion(false)
+            return
+        }
+        let credential = EmailAuthProvider.credential(withEmail: email, password: password)
+        user.reauthenticate(with: credential) { _, error in
+            if let error = error {
+                print("Yeniden kimlik doğrulama başarısız: \(error)")
+                completion(false)
+                return
+            }
+            user.delete { error in
+                if let error = error {
+                    print("Hesap silme başarısız: \(error)")
+                    completion(false)
+                } else {
+                    completion(true)
+                }
+            }
+        }
+    }
     func signOut(completion: @escaping (Bool) -> Void) {
         do {
             try Auth.auth().signOut()

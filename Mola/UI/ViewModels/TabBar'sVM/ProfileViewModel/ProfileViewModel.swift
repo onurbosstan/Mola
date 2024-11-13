@@ -32,5 +32,9 @@ class ProfileViewModel {
             }
         }
     }
-
+    func deleteAccount(password: String, completion: @escaping (Bool) -> Void) {
+        userData.deleteAccount(password: password) { success in
+            completion(success)
+        }
+    }
 }

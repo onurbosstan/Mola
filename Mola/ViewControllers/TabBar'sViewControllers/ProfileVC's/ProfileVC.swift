@@ -15,6 +15,7 @@ class ProfileVC: UIViewController {
             (title: "Email Değiştir", image: "envelope.circle", bgColor: .gray ,iconColor: .white),
             (title: "Şifre Değiştir", image: "lock.fill", bgColor: UIColor(red: 1.0, green: 0.8, blue: 0.0, alpha: 1.0), iconColor: .white),
             (title: "Gizlilik Politikamız", image: "newspaper.fill", bgColor: UIColor(red: 0.1, green: 0.1, blue: 1.0, alpha: 0.5), iconColor: .white),
+            (title: "Hesabımı Sil", image: "trash.circle.fill", bgColor: .black, iconColor: .white),
             (title: "Çıkış Yap", image: "rectangle.portrait.and.arrow.right", bgColor: .red, iconColor: .white)]]
     
     override func viewDidLoad() {
@@ -27,6 +28,43 @@ class ProfileVC: UIViewController {
         let okButton = UIAlertAction(title: "OK", style: .default)
         alert.addAction(okButton)
         self.present(alert, animated: true)
+    }
+    private func showDeleteAccountAlert() {
+           let alert = UIAlertController(title: "Hesabınızı Silin", message: "Lütfen şifrenizi girin", preferredStyle: .alert)
+           alert.addTextField { (textField) in
+               textField.placeholder = "Şifrenizi girin"
+               textField.isSecureTextEntry = true
+           }
+           let deleteAction = UIAlertAction(title: "Sil", style: .destructive) { [weak self] _ in
+               if let password = alert.textFields?.first?.text {
+                   self?.viewModel.deleteAccount(password: password) { success in
+                       if success {
+                           self?.navigateToLogin() // Başarılı silme işlemi sonrası yönlendirme
+                       } else {
+                           self?.makeAlert(titleInput: "Hata", messageInput: "Hesap silme işlemi başarısız.")
+                       }
+                   }
+               }
+           }
+           let cancelAction = UIAlertAction(title: "İptal", style: .cancel, handler: nil)
+           
+           alert.addAction(deleteAction)
+           alert.addAction(cancelAction)
+           
+           self.present(alert, animated: true)
+       }
+       
+    private func navigateToLogin() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let logInVC = storyboard.instantiateViewController(withIdentifier: "LogInVC") as? LogInVC {
+            let navigationController = UINavigationController(rootViewController: logInVC)
+            UIApplication.shared.windows.first?.rootViewController = navigationController
+            UIView.transition(with: UIApplication.shared.windows.first!,
+                                duration: 0.3,
+                                options: .transitionCrossDissolve,
+                                animations: nil,
+                                completion: nil)
+        }
     }
 }
 extension ProfileVC: UITableViewDataSource, UITableViewDelegate {
@@ -55,6 +93,8 @@ extension ProfileVC: UITableViewDataSource, UITableViewDelegate {
         case 2:
             self.performSegue(withIdentifier: "toPrivacyVC", sender: nil)
         case 3:
+            showDeleteAccountAlert()
+        case 4:
             viewModel.logOut()
         default:
             break

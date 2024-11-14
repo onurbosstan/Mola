@@ -25,6 +25,7 @@
     <string>Uygulamanızın kameraya erişmesine izin verin</string>
     <key>NSPhotoLibraryUsageDescription</key>
     <string>Uygulamanızın fotoğraf kütüphanesine erişmesine izin verin</string>
-
+    <key>UIUserInterfaceStyle</key>
+    <string>Light</string>
 </dict>
 </plist>

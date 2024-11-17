@@ -26,6 +26,10 @@ class RegisterVC: UIViewController {
             self.makeAlert(titleInput: "Hata!", messageInput: "Lütfen geçerli bir e-posta ve şifre girin.")
             return
         }
+        if !viewModel.isValidEmail(email) {
+            self.makeAlert(titleInput: "Hata!", messageInput: "Lütfen geçerli bir e-posta adresi girin.")
+            return
+        }
         self.viewModel.signUp(email: email, password: password) { [weak self] success in
             guard let self = self else { return }
             if success {

@@ -20,23 +20,25 @@ class UserProcesses {
         }
     }
     func signUp(email: String?, password: String?, completion: @escaping (Bool) -> Void) {
-        if let mail = email, let password = password {
-            let user = Users(email: mail, password: password)
-            let data = ["email": user.email, "password": user.password]
-            Auth.auth().createUser(withEmail: mail, password: password) { authResult, error in
-                if error == nil {
-                    let myUsers = Firestore.firestore()
-                    let userCollection = myUsers.collection("Users").document(authResult?.user.uid ?? "").collection(user.email)
-                    userCollection.document("UserInfo").setData(data) { error in
-                        if error != nil {
+        guard let email = email, let password = password else {
+            completion(false)
+            return
+        }
+        
+        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+            if let error = error {
+                print("Kayıt sırasında hata: \(error.localizedDescription)")
+                completion(false)
+            } else {
+                Auth.auth().currentUser?.sendEmailVerification(completion: { error in
+                    if let error = error {
+                        print("Doğrulama e-postası gönderilemedi: \(error.localizedDescription)")
                         completion(false)
-                        } else {
-                            completion(true)
-                        }
+                    } else {
+                        print("Doğrulama e-postası gönderildi")
+                        completion(true)
                     }
-                } else {
-                    completion(false)
-                }
+                })
             }
         }
     }

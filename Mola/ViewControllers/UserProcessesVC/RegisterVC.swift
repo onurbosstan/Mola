@@ -22,9 +22,16 @@ class RegisterVC: UIViewController {
         view.endEditing(true)
     }
     @IBAction func registerButton(_ sender: Any) {
-        if let email = self.emailText.text, let password = self.passwordText.text {
-            self.viewModel.signUp(email: email, password: password) { _ in
-                self.makeAlert(titleInput: "Başarılı!", messageInput: "Başarıyla kayıt oldunuz.")
+        guard let email = self.emailText.text, let password = self.passwordText.text else {
+            self.makeAlert(titleInput: "Hata!", messageInput: "Lütfen geçerli bir e-posta ve şifre girin.")
+            return
+        }
+        self.viewModel.signUp(email: email, password: password) { [weak self] success in
+            guard let self = self else { return }
+            if success {
+                self.makeAlert(titleInput: "Başarılı!", messageInput: "Doğrulama e-postası gönderildi. Lütfen e-postanızı kontrol edin.")
+            } else {
+                self.makeAlert(titleInput: "Hata!", messageInput: "Kayıt işlemi başarısız. Lütfen tekrar deneyin.")
             }
         }
     }

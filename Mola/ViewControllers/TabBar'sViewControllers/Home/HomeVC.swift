@@ -16,6 +16,17 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         textView.delegate = self
+        
+        showMotivationMessage()
+    }
+    private func showMotivationMessage() {
+        let message = viewModel.getMotivationMessage()
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: "Günün Mesajı 📝", message: message, preferredStyle: .alert)
+            let continueAction = UIAlertAction(title: "Devam", style: .default)
+            alert.addAction(continueAction)
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     @IBAction func saveButton(_ sender: Any) {

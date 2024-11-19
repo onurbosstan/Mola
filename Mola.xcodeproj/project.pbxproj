@@ -41,6 +41,7 @@
 		C6B7CA6A2CC9188500A21DDE /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = C6B7CA692CC9188500A21DDE /* loading.json */; };
 		C6C3E19A2CB1550200C87CBB /* UserProcesses.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C3E1992CB1550200C87CBB /* UserProcesses.swift */; };
 		C6CEABA52CB92DCC008B4B06 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CEABA42CB92DCC008B4B06 /* ProfileCell.swift */; };
+		C6D190CF2CED128700A72AF1 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D190CE2CED128700A72AF1 /* KeychainManager.swift */; };
 		C6D556392CC46406003BB8B7 /* MemoriesUploadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D556382CC46406003BB8B7 /* MemoriesUploadVC.swift */; };
 		C6DA9AF12CE280F00058C5AF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6DA9AF02CE280F00058C5AF /* GoogleService-Info.plist */; };
 		C6DA9AF42CE2B4000058C5AF /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = C6DA9AF32CE2B4000058C5AF /* GoogleSignIn */; };
@@ -89,6 +90,7 @@
 		C6B7CA692CC9188500A21DDE /* loading.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		C6C3E1992CB1550200C87CBB /* UserProcesses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProcesses.swift; sourceTree = "<group>"; };
 		C6CEABA42CB92DCC008B4B06 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		C6D190CE2CED128700A72AF1 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		C6D556382CC46406003BB8B7 /* MemoriesUploadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesUploadVC.swift; sourceTree = "<group>"; };
 		C6DA9AF02CE280F00058C5AF /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C6E12A272CAEE16D0066FA48 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
@@ -372,6 +374,7 @@
 			isa = PBXGroup;
 			children = (
 				C6F8E6742CBE8A9E00D1A7E4 /* Note.swift */,
+				C6D190CE2CED128700A72AF1 /* KeychainManager.swift */,
 			);
 			path = NoteEntity;
 			sourceTree = "<group>";
@@ -515,6 +518,7 @@
 				C6FCCCA42CB7D53400C4DEC8 /* NotesViewModel.swift in Sources */,
 				C6CEABA52CB92DCC008B4B06 /* ProfileCell.swift in Sources */,
 				C6B515152CC6B4A100EE78E7 /* MemoriesUploadViewModel.swift in Sources */,
+				C6D190CF2CED128700A72AF1 /* KeychainManager.swift in Sources */,
 				C6746EBE2CCABF7700A6B751 /* PrivacyViewModel.swift in Sources */,
 				C6FCCC922CB7D3EB00C4DEC8 /* CalendarVC.swift in Sources */,
 				C684DDD72CAEDF140053B291 /* ForgotPasswordVC.swift in Sources */,

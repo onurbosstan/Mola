@@ -18,7 +18,7 @@ class KeychainManager {
             kSecValueData as String: data
         ]
 
-        SecItemDelete(query as CFDictionary) // Mevcut olanı sil
+        SecItemDelete(query as CFDictionary)
         let status = SecItemAdd(query as CFDictionary, nil)
         return status == errSecSuccess
     }

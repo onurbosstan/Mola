@@ -13,7 +13,7 @@ class HomeViewModel {
     
     private let dailyMessages: [String: String] = [
         "Pazartesi": "Harika bir hafta başlıyor! 🚀",
-        "Salı": "Bugün daha güçlü ol! 💪",
+        "Salı": "Sadece görülmeyeni gören imkansızı başarabilirsin! 💪",
         "Çarşamba": "Küçük adımlar, büyük hedefler! 🏁",
         "Perşembe": "Hayallerine bir adım daha yaklaş! 🌟",
         "Cuma": "Başarı seni bekliyor! 🎉",

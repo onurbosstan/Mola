@@ -72,7 +72,7 @@ class NotesVC: UIViewController, UISearchBarDelegate {
         }
 
         let cancelAction = UIAlertAction(title: "İptal", style: .cancel) { [weak self] _ in
-            self?.authenticateUser()
+            print("Şifre belirlenmedi. Notlara erişim kısıtlandı.")
         }
 
         alert.addAction(saveAction)
@@ -102,7 +102,12 @@ class NotesVC: UIViewController, UISearchBarDelegate {
             }
         }
 
+        let cancelAction = UIAlertAction(title: "İptal", style: .cancel) { [weak self] _ in
+            print("Kullanıcı notlara erişimi iptal etti.")
+        }
+
         alert.addAction(loginAction)
+        alert.addAction(cancelAction)
         present(alert, animated: true, completion: nil)
     }
 

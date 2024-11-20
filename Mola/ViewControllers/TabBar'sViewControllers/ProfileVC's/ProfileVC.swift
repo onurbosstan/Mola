@@ -15,6 +15,7 @@ class ProfileVC: UIViewController {
             (title: "Email Değiştir", image: "envelope.circle", bgColor: .systemGreen ,iconColor: .white),
             (title: "Şifre Değiştir", image: "lock.fill", bgColor: UIColor(red: 1.0, green: 0.8, blue: 0.0, alpha: 1.0), iconColor: .white),
             (title: "Gizlilik Politikamız", image: "newspaper.fill", bgColor: UIColor(red: 0.1, green: 0.1, blue: 1.0, alpha: 0.5), iconColor: .white),
+            (title: "Not Şifremi Değiştir", image: "key.fill", bgColor: .systemBlue, iconColor: .white),
             (title: "Hesabımı Sil", image: "trash.circle.fill", bgColor: .systemGray3, iconColor: .white),
             (title: "Çıkış Yap", image: "rectangle.portrait.and.arrow.right", bgColor: .red, iconColor: .white)]]
     
@@ -66,6 +67,51 @@ class ProfileVC: UIViewController {
                                 completion: nil)
         }
     }
+    private func showChangeNotePasswordAlert() {
+        let alert = UIAlertController(title: "Not Şifrenizi Değiştirin", message: nil, preferredStyle: .alert)
+        alert.addTextField { textField in
+            textField.placeholder = "Eski Şifreniz"
+            textField.isSecureTextEntry = true
+        }
+        alert.addTextField { textField in
+            textField.placeholder = "Yeni Şifreniz"
+            textField.isSecureTextEntry = true
+        }
+        alert.addTextField { textField in
+            textField.placeholder = "Yeni Şifreniz Tekrar"
+            textField.isSecureTextEntry = true
+        }
+
+        let saveAction = UIAlertAction(title: "Kaydet", style: .default) { [weak self] _ in
+            guard let self = self else { return }
+            let oldPassword = alert.textFields?[0].text ?? ""
+            let newPassword = alert.textFields?[1].text ?? ""
+            let confirmPassword = alert.textFields?[2].text ?? ""
+
+            if oldPassword.isEmpty || newPassword.isEmpty || confirmPassword.isEmpty {
+                self.makeAlert(titleInput: "Hata", messageInput: "Tüm alanları doldurmanız gerekiyor.")
+                return
+            }
+
+            if newPassword != confirmPassword {
+                self.makeAlert(titleInput: "Hata", messageInput: "Yeni şifreler eşleşmiyor.")
+                return
+            }
+
+            if self.viewModel.validateNotePassword(oldPassword) {
+                self.viewModel.changeNotePassword(newPassword: newPassword)
+                self.makeAlert(titleInput: "Başarılı", messageInput: "Not şifreniz başarıyla değiştirildi.")
+            } else {
+                self.makeAlert(titleInput: "Hata", messageInput: "Eski şifreniz yanlış.")
+            }
+        }
+
+        let cancelAction = UIAlertAction(title: "İptal", style: .cancel)
+
+        alert.addAction(saveAction)
+        alert.addAction(cancelAction)
+        present(alert, animated: true, completion: nil)
+    }
 }
 extension ProfileVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -93,8 +139,10 @@ extension ProfileVC: UITableViewDataSource, UITableViewDelegate {
         case 2:
             self.performSegue(withIdentifier: "toPrivacyVC", sender: nil)
         case 3:
-            showDeleteAccountAlert()
+            showChangeNotePasswordAlert()
         case 4:
+            showDeleteAccountAlert()
+        case 5:
             viewModel.logOut()
         default:
             break

@@ -37,4 +37,11 @@ class ProfileViewModel {
             completion(success)
         }
     }
+    func validateNotePassword(_ inputPassword: String) -> Bool {
+        return KeychainManager.getPassword(forKey: "notesPassword") == inputPassword
+    }
+
+    func changeNotePassword(newPassword: String) {
+        KeychainManager.savePassword(password: newPassword, forKey: "notesPassword")
+    }
 }

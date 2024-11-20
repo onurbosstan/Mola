@@ -12,6 +12,23 @@ import FirebaseAuth
 class NotesViewModel {
     let db = Firestore.firestore()
     var notes: [Note] = []
+    private let passwordKey = "notesPassword"
+
+    func savePassword(_ password: String) -> Bool {
+        return KeychainManager.savePassword(password: password, forKey: passwordKey)
+    }
+
+    func getPassword() -> String? {
+        return KeychainManager.getPassword(forKey: passwordKey)
+    }
+
+    func isPasswordSet() -> Bool {
+        return getPassword() != nil
+    }
+
+    func validatePassword(_ inputPassword: String) -> Bool {
+        return getPassword() == inputPassword
+    }
     
     func loadNotes(completion: @escaping () -> Void) {
         guard let user = Auth.auth().currentUser else {

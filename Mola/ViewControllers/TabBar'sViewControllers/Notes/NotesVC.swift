@@ -17,6 +17,7 @@ class NotesVC: UIViewController, UISearchBarDelegate {
     var selectedDate: Date?
     var isSearching: Bool = false
     var isFiltered: Bool = false
+    var isAuthenticated = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,19 +25,98 @@ class NotesVC: UIViewController, UISearchBarDelegate {
         tableView.dataSource = self
         searchBar.delegate = self
         filteredNotes = viewModel.notes
+        
+        if !viewModel.isPasswordSet() {
+            askForPasswordSetup()
+        } else {
+            authenticateUser()
+        }
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        if isAuthenticated {
+            loadNotes()
+        } else {
+            authenticateUser()
+        }
+    }
+    
+    private func askForPasswordSetup() {
+        let alert = UIAlertController(title: "Şifre Kullanmak İster misiniz?", message: "Notlarınızı korumak için bir şifre belirleyebilirsiniz.", preferredStyle: .alert)
+        alert.addTextField { textField in
+            textField.placeholder = "Şifre"
+            textField.isSecureTextEntry = true
+        }
+        alert.addTextField { textField in
+            textField.placeholder = "Şifreyi Tekrar Girin"
+            textField.isSecureTextEntry = true
+        }
+
+        let saveAction = UIAlertAction(title: "Kaydet", style: .default) { [weak self] _ in
+            guard let self = self else { return }
+            let password = alert.textFields?.first?.text ?? ""
+            let confirmPassword = alert.textFields?[1].text ?? ""
+
+            if password.isEmpty || password != confirmPassword {
+                self.showErrorAlert(message: "Şifreler uyuşmuyor. Lütfen tekrar deneyin.") {
+                    self.askForPasswordSetup()
+                }
+            } else if self.viewModel.savePassword(password) {
+                print("Şifre kaydedildi.")
+                self.authenticateUser()
+            } else {
+                self.showErrorAlert(message: "Şifre kaydedilemedi.") {
+                    self.askForPasswordSetup()
+                }
+            }
+        }
+
+        let cancelAction = UIAlertAction(title: "İptal", style: .cancel) { [weak self] _ in
+            self?.authenticateUser()
+        }
+
+        alert.addAction(saveAction)
+        alert.addAction(cancelAction)
+        present(alert, animated: true, completion: nil)
+    }
+
+    private func authenticateUser() {
+        let alert = UIAlertController(title: "Şifre", message: "Notlarınıza erişmek için şifrenizi girin.", preferredStyle: .alert)
+        alert.addTextField { textField in
+            textField.placeholder = "Şifre"
+            textField.isSecureTextEntry = true
+        }
+
+        let loginAction = UIAlertAction(title: "Giriş", style: .default) { [weak self] _ in
+            guard let self = self else { return }
+            let inputPassword = alert.textFields?.first?.text ?? ""
+
+            if self.viewModel.validatePassword(inputPassword) {
+                print("Şifre doğru. Notlara erişim sağlandı.")
+                self.isAuthenticated = true
+                self.loadNotes()
+            } else {
+                self.showErrorAlert(message: "Şifre yanlış. Lütfen tekrar deneyin.") {
+                    self.authenticateUser()
+                }
+            }
+        }
+
+        alert.addAction(loginAction)
+        present(alert, animated: true, completion: nil)
+    }
+
+    private func loadNotes() {
+        guard isAuthenticated else {
+            print("Kullanıcı doğrulanmadı. Notlar yüklenmiyor.")
+            return
+        }
+
         AnimationHelper.showActivityIndicator(animationName: "loading")
         viewModel.loadNotes { [weak self] in
             DispatchQueue.main.async {
                 AnimationHelper.hideActivityIndicator()
-                if let isFiltered = self?.isFiltered, isFiltered, let date = self?.selectedDate {
-                    self?.filteredNotes = self?.viewModel.getNotes(for: date) ?? []
-                } else {
-                    self?.filteredNotes = self?.viewModel.notes ?? []
-                }
+                self?.filteredNotes = self?.viewModel.notes ?? []
                 self?.tableView.reloadData()
             }
         }
@@ -167,10 +247,12 @@ extension NotesVC: UITableViewDataSource, UITableViewDelegate {
         return UISwipeActionsConfiguration(actions: [deleteAction])
     }
     
-    func showErrorAlert(message: String) {
+    private func showErrorAlert(message: String, completion: (() -> Void)? = nil) {
         let alert = UIAlertController(title: "Hata", message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Tamam", style: .default, handler: nil)
+        let okAction = UIAlertAction(title: "Tamam", style: .default) { _ in
+            completion?()
+        }
         alert.addAction(okAction)
-        self.present(alert, animated: true, completion: nil)
+        present(alert, animated: true, completion: nil)
     }
 }

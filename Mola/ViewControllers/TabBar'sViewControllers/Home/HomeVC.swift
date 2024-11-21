@@ -17,8 +17,17 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         textView.delegate = self
         
-        showMotivationMessage()
+        showMotivationMessageIfNeeded()
     }
+    private func showMotivationMessageIfNeeded() {
+        let lastShownDate = UserDefaults.standard.string(forKey: "lastMotivationDate")
+        let today = getCurrentDate()
+        if lastShownDate != today {
+            showMotivationMessage()
+            UserDefaults.standard.set(today, forKey: "lastMotivationDate")
+        }
+    }
+    
     private func showMotivationMessage() {
         let message = viewModel.getMotivationMessage()
         DispatchQueue.main.async {
@@ -27,6 +36,12 @@ class HomeVC: UIViewController {
             alert.addAction(continueAction)
             self.present(alert, animated: true, completion: nil)
         }
+    }
+    
+    private func getCurrentDate() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        return formatter.string(from: Date())
     }
     
     @IBAction func saveButton(_ sender: Any) {

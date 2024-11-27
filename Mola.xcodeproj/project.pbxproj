@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C60E1F4A2CF7544500CED15E /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = C60E1F492CF7544500CED15E /* DGCharts */; };
+		C60E1F4C2CF7544500CED15E /* DGChartsDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = C60E1F4B2CF7544500CED15E /* DGChartsDynamic */; };
 		C6168A962CC45D0C006A9C60 /* MemoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6168A952CC45D0C006A9C60 /* MemoriesCell.swift */; };
 		C6190A7E2CD42957001C2C4D /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6190A7D2CD42957001C2C4D /* CustomTabBarController.swift */; };
 		C625D99D2CDFBC9E00377F87 /* CropViewController in Frameworks */ = {isa = PBXBuildFile; productRef = C625D99C2CDFBC9E00377F87 /* CropViewController */; };
@@ -118,10 +120,12 @@
 				C625D99F2CDFBC9E00377F87 /* TOCropViewController in Frameworks */,
 				C684DDCF2CAEA62D0053B291 /* FirebaseFirestore in Frameworks */,
 				C684DDCB2CAEA62D0053B291 /* FirebaseCore in Frameworks */,
+				C60E1F4A2CF7544500CED15E /* DGCharts in Frameworks */,
 				C684DDD12CAEA62D0053B291 /* FirebaseStorage in Frameworks */,
 				C6DA9AF42CE2B4000058C5AF /* GoogleSignIn in Frameworks */,
 				C684DDC92CAEA62D0053B291 /* FirebaseAuth in Frameworks */,
 				C625D99D2CDFBC9E00377F87 /* CropViewController in Frameworks */,
+				C60E1F4C2CF7544500CED15E /* DGChartsDynamic in Frameworks */,
 				C6746EC12CCFDFA700A6B751 /* FSCalendar in Frameworks */,
 				C6B7CA5E2CC913B800A21DDE /* Lottie in Frameworks */,
 				C6DA9AF62CE2B4000058C5AF /* GoogleSignInSwift in Frameworks */,
@@ -441,6 +445,8 @@
 				C625D99E2CDFBC9E00377F87 /* TOCropViewController */,
 				C6DA9AF32CE2B4000058C5AF /* GoogleSignIn */,
 				C6DA9AF52CE2B4000058C5AF /* GoogleSignInSwift */,
+				C60E1F492CF7544500CED15E /* DGCharts */,
+				C60E1F4B2CF7544500CED15E /* DGChartsDynamic */,
 			);
 			productName = Mola;
 			productReference = C684DDB32CAD665D0053B291 /* Mola.app */;
@@ -476,6 +482,7 @@
 				C6746EBF2CCFDFA700A6B751 /* XCRemoteSwiftPackageReference "FSCalendar" */,
 				C625D99B2CDFBC9E00377F87 /* XCRemoteSwiftPackageReference "TOCropViewController" */,
 				C6DA9AF22CE2B4000058C5AF /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				C60E1F482CF7544500CED15E /* XCRemoteSwiftPackageReference "Charts" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C684DD422CAD641F0053B291;
@@ -768,6 +775,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C60E1F482CF7544500CED15E /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
 		C625D99B2CDFBC9E00377F87 /* XCRemoteSwiftPackageReference "TOCropViewController" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/TimOliver/TOCropViewController";
@@ -811,6 +826,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C60E1F492CF7544500CED15E /* DGCharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C60E1F482CF7544500CED15E /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = DGCharts;
+		};
+		C60E1F4B2CF7544500CED15E /* DGChartsDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C60E1F482CF7544500CED15E /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = DGChartsDynamic;
+		};
 		C625D99C2CDFBC9E00377F87 /* CropViewController */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C625D99B2CDFBC9E00377F87 /* XCRemoteSwiftPackageReference "TOCropViewController" */;

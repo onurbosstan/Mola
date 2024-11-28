@@ -507,6 +507,7 @@
                         <segue destination="40v-eU-2Vz" kind="show" identifier="toChangePassword" id="VFX-bd-Wlb"/>
                         <segue destination="z0V-yf-H9x" kind="show" identifier="toChangeEmail" id="2kH-EV-9co"/>
                         <segue destination="89m-h7-tmb" kind="show" identifier="toPrivacyVC" id="wcq-Yh-YhE"/>
+                        <segue destination="1z2-OU-Mhr" kind="show" identifier="toChart" id="qlx-EX-QX5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JVh-Pn-L7r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1127,6 +1128,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cke-vq-ASe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1055.7251908396945" y="1450"/>
+        </scene>
+        <!--Monthly Notes ChartVC-->
+        <scene sceneID="UnZ-xz-Gpm">
+            <objects>
+                <viewController storyboardIdentifier="MonthlyNotesChartVC" id="1z2-OU-Mhr" customClass="MonthlyNotesChartVC" customModule="Mola" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ryG-X6-jcc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" restorationIdentifier="BarChartView" translatesAutoresizingMaskIntoConstraints="NO" id="QH6-QN-Q00" customClass="BarChartView" customModule="DGCharts">
+                                <rect key="frame" x="0.0" y="44" width="393" height="729"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Afr-bM-fcq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QH6-QN-Q00" firstAttribute="top" secondItem="Afr-bM-fcq" secondAttribute="top" id="GzO-G5-TJw"/>
+                            <constraint firstItem="Afr-bM-fcq" firstAttribute="trailing" secondItem="QH6-QN-Q00" secondAttribute="trailing" id="PA2-Lc-0BM"/>
+                            <constraint firstItem="QH6-QN-Q00" firstAttribute="leading" secondItem="Afr-bM-fcq" secondAttribute="leading" id="YW7-h2-H8c"/>
+                            <constraint firstItem="Afr-bM-fcq" firstAttribute="bottom" secondItem="QH6-QN-Q00" secondAttribute="bottom" constant="30" id="aA9-c2-PPD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Hmp-Xj-53i"/>
+                    <connections>
+                        <outlet property="chartView" destination="QH6-QN-Q00" id="1Kb-uo-2K5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tse-xE-jPl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7701.5267175572517" y="1450"/>
         </scene>
     </scenes>
     <resources>

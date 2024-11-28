@@ -15,6 +15,7 @@ class ProfileVC: UIViewController {
             (title: "Email Değiştir", image: "envelope.circle", bgColor: .systemGreen ,iconColor: .white),
             (title: "Şifre Değiştir", image: "lock.fill", bgColor: UIColor(red: 1.0, green: 0.8, blue: 0.0, alpha: 1.0), iconColor: .white),
             (title: "Gizlilik Politikamız", image: "newspaper.fill", bgColor: UIColor(red: 0.1, green: 0.1, blue: 1.0, alpha: 0.5), iconColor: .white),
+            (title: "Aylık Not Grafiği", image: "chart.bar.doc.horizontal", bgColor: .systemPurple, iconColor: .white),
             (title: "Not Şifremi Değiştir", image: "key.fill", bgColor: .systemBlue, iconColor: .white),
             (title: "Hesabımı Sil", image: "trash.circle.fill", bgColor: .systemGray3, iconColor: .white),
             (title: "Çıkış Yap", image: "rectangle.portrait.and.arrow.right", bgColor: .red, iconColor: .white)]]
@@ -132,20 +133,22 @@ extension ProfileVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         switch indexPath.row {
-        case 0:
-            self.performSegue(withIdentifier: "toChangeEmail", sender: nil)
-        case 1:
-            self.performSegue(withIdentifier: "toChangePassword", sender: nil)
-        case 2:
-            self.performSegue(withIdentifier: "toPrivacyVC", sender: nil)
-        case 3:
-            showChangeNotePasswordAlert()
-        case 4:
-            showDeleteAccountAlert()
-        case 5:
-            viewModel.logOut()
-        default:
-            break
+         case 0:
+             self.performSegue(withIdentifier: "toChangeEmail", sender: nil)
+         case 1:
+             self.performSegue(withIdentifier: "toChangePassword", sender: nil)
+         case 2:
+             self.performSegue(withIdentifier: "toPrivacyVC", sender: nil)
+         case 3:
+             self.performSegue(withIdentifier: "toChart", sender: nil)
+         case 4:
+             showChangeNotePasswordAlert()
+         case 5:
+             showDeleteAccountAlert()
+         case 6:
+             viewModel.logOut()
+         default:
+             break
         }
     }
 }

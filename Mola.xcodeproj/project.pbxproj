@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C60E1F4A2CF7544500CED15E /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = C60E1F492CF7544500CED15E /* DGCharts */; };
-		C60E1F4C2CF7544500CED15E /* DGChartsDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = C60E1F4B2CF7544500CED15E /* DGChartsDynamic */; };
 		C6168A962CC45D0C006A9C60 /* MemoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6168A952CC45D0C006A9C60 /* MemoriesCell.swift */; };
 		C6190A7E2CD42957001C2C4D /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6190A7D2CD42957001C2C4D /* CustomTabBarController.swift */; };
 		C625D99D2CDFBC9E00377F87 /* CropViewController in Frameworks */ = {isa = PBXBuildFile; productRef = C625D99C2CDFBC9E00377F87 /* CropViewController */; };
@@ -41,6 +39,9 @@
 		C6B7CA5E2CC913B800A21DDE /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = C6B7CA5D2CC913B800A21DDE /* Lottie */; };
 		C6B7CA602CC913C500A21DDE /* AnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B7CA5F2CC913C500A21DDE /* AnimationHelper.swift */; };
 		C6B7CA6A2CC9188500A21DDE /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = C6B7CA692CC9188500A21DDE /* loading.json */; };
+		C6BE87B62CF8A8DF00AFC8B9 /* MonthlyNotesChartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BE87B52CF8A8DF00AFC8B9 /* MonthlyNotesChartVC.swift */; };
+		C6BE87BA2CF8B57800AFC8B9 /* MonthlyNotesChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BE87B92CF8B57800AFC8B9 /* MonthlyNotesChartViewModel.swift */; };
+		C6C3D21C2CF8BB7900E563A2 /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = C6C3D21B2CF8BB7900E563A2 /* DGCharts */; };
 		C6C3E19A2CB1550200C87CBB /* UserProcesses.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C3E1992CB1550200C87CBB /* UserProcesses.swift */; };
 		C6CEABA52CB92DCC008B4B06 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CEABA42CB92DCC008B4B06 /* ProfileCell.swift */; };
 		C6D190CF2CED128700A72AF1 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D190CE2CED128700A72AF1 /* KeychainManager.swift */; };
@@ -63,6 +64,19 @@
 		C6FCCCA42CB7D53400C4DEC8 /* NotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FCCCA32CB7D53400C4DEC8 /* NotesViewModel.swift */; };
 		C6FCCCA62CB7D54000C4DEC8 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FCCCA52CB7D54000C4DEC8 /* ProfileViewModel.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C6BE87B82CF8ADC600AFC8B9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C6168A952CC45D0C006A9C60 /* MemoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesCell.swift; sourceTree = "<group>"; };
@@ -90,6 +104,8 @@
 		C6B515172CC6D1AE00EE78E7 /* Memories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memories.swift; sourceTree = "<group>"; };
 		C6B7CA5F2CC913C500A21DDE /* AnimationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationHelper.swift; sourceTree = "<group>"; };
 		C6B7CA692CC9188500A21DDE /* loading.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		C6BE87B52CF8A8DF00AFC8B9 /* MonthlyNotesChartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyNotesChartVC.swift; sourceTree = "<group>"; };
+		C6BE87B92CF8B57800AFC8B9 /* MonthlyNotesChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyNotesChartViewModel.swift; sourceTree = "<group>"; };
 		C6C3E1992CB1550200C87CBB /* UserProcesses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProcesses.swift; sourceTree = "<group>"; };
 		C6CEABA42CB92DCC008B4B06 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		C6D190CE2CED128700A72AF1 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
@@ -120,12 +136,11 @@
 				C625D99F2CDFBC9E00377F87 /* TOCropViewController in Frameworks */,
 				C684DDCF2CAEA62D0053B291 /* FirebaseFirestore in Frameworks */,
 				C684DDCB2CAEA62D0053B291 /* FirebaseCore in Frameworks */,
-				C60E1F4A2CF7544500CED15E /* DGCharts in Frameworks */,
+				C6C3D21C2CF8BB7900E563A2 /* DGCharts in Frameworks */,
 				C684DDD12CAEA62D0053B291 /* FirebaseStorage in Frameworks */,
 				C6DA9AF42CE2B4000058C5AF /* GoogleSignIn in Frameworks */,
 				C684DDC92CAEA62D0053B291 /* FirebaseAuth in Frameworks */,
 				C625D99D2CDFBC9E00377F87 /* CropViewController in Frameworks */,
-				C60E1F4C2CF7544500CED15E /* DGChartsDynamic in Frameworks */,
 				C6746EC12CCFDFA700A6B751 /* FSCalendar in Frameworks */,
 				C6B7CA5E2CC913B800A21DDE /* Lottie in Frameworks */,
 				C6DA9AF62CE2B4000058C5AF /* GoogleSignInSwift in Frameworks */,
@@ -250,6 +265,7 @@
 				C6FCCC972CB7D4A600C4DEC8 /* ProfileVC.swift */,
 				C6B494AE2CBA7F47004ADF01 /* ChangePasswordVC.swift */,
 				C6B494B22CBAA2E1004ADF01 /* ChangeEmailVC.swift */,
+				C6BE87B52CF8A8DF00AFC8B9 /* MonthlyNotesChartVC.swift */,
 				C6746EBB2CCABF6600A6B751 /* PrivacyVC.swift */,
 			);
 			path = "ProfileVC's";
@@ -285,6 +301,7 @@
 				C6FCCCA52CB7D54000C4DEC8 /* ProfileViewModel.swift */,
 				C6B494B02CBA7F54004ADF01 /* ChangePasswordViewModel.swift */,
 				C6B494B42CBAA2FA004ADF01 /* ChangeEmailViewModel.swift */,
+				C6BE87B92CF8B57800AFC8B9 /* MonthlyNotesChartViewModel.swift */,
 				C6746EBD2CCABF7700A6B751 /* PrivacyViewModel.swift */,
 			);
 			path = ProfileViewModel;
@@ -427,6 +444,7 @@
 				C684DD472CAD641F0053B291 /* Sources */,
 				C684DD482CAD641F0053B291 /* Frameworks */,
 				C684DD492CAD641F0053B291 /* Resources */,
+				C6BE87B82CF8ADC600AFC8B9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -445,8 +463,7 @@
 				C625D99E2CDFBC9E00377F87 /* TOCropViewController */,
 				C6DA9AF32CE2B4000058C5AF /* GoogleSignIn */,
 				C6DA9AF52CE2B4000058C5AF /* GoogleSignInSwift */,
-				C60E1F492CF7544500CED15E /* DGCharts */,
-				C60E1F4B2CF7544500CED15E /* DGChartsDynamic */,
+				C6C3D21B2CF8BB7900E563A2 /* DGCharts */,
 			);
 			productName = Mola;
 			productReference = C684DDB32CAD665D0053B291 /* Mola.app */;
@@ -482,7 +499,7 @@
 				C6746EBF2CCFDFA700A6B751 /* XCRemoteSwiftPackageReference "FSCalendar" */,
 				C625D99B2CDFBC9E00377F87 /* XCRemoteSwiftPackageReference "TOCropViewController" */,
 				C6DA9AF22CE2B4000058C5AF /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
-				C60E1F482CF7544500CED15E /* XCRemoteSwiftPackageReference "Charts" */,
+				C6C3D21A2CF8BB7800E563A2 /* XCRemoteSwiftPackageReference "Charts" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C684DD422CAD641F0053B291;
@@ -545,10 +562,12 @@
 				C6F8E6722CBD967B00D1A7E4 /* NotesCell.swift in Sources */,
 				C6B494B12CBA7F54004ADF01 /* ChangePasswordViewModel.swift in Sources */,
 				C6FCCCA62CB7D54000C4DEC8 /* ProfileViewModel.swift in Sources */,
+				C6BE87BA2CF8B57800AFC8B9 /* MonthlyNotesChartViewModel.swift in Sources */,
 				C684DDDA2CAEE0060053B291 /* RegisterVC.swift in Sources */,
 				C65D9F3B2CB4550C007A6580 /* RegisterViewModel.swift in Sources */,
 				C6FCCC962CB7D49C00C4DEC8 /* NotesVC.swift in Sources */,
 				C6B494B32CBAA2E1004ADF01 /* ChangeEmailVC.swift in Sources */,
+				C6BE87B62CF8A8DF00AFC8B9 /* MonthlyNotesChartVC.swift in Sources */,
 				C6C3E19A2CB1550200C87CBB /* UserProcesses.swift in Sources */,
 				C6FCCC9C2CB7D4DE00C4DEC8 /* MemoriesViewModel.swift in Sources */,
 			);
@@ -775,14 +794,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		C60E1F482CF7544500CED15E /* XCRemoteSwiftPackageReference "Charts" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/danielgindi/Charts.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.1.0;
-			};
-		};
 		C625D99B2CDFBC9E00377F87 /* XCRemoteSwiftPackageReference "TOCropViewController" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/TimOliver/TOCropViewController";
@@ -815,6 +826,14 @@
 				minimumVersion = 4.5.0;
 			};
 		};
+		C6C3D21A2CF8BB7800E563A2 /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
 		C6DA9AF22CE2B4000058C5AF /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
@@ -826,16 +845,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C60E1F492CF7544500CED15E /* DGCharts */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C60E1F482CF7544500CED15E /* XCRemoteSwiftPackageReference "Charts" */;
-			productName = DGCharts;
-		};
-		C60E1F4B2CF7544500CED15E /* DGChartsDynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C60E1F482CF7544500CED15E /* XCRemoteSwiftPackageReference "Charts" */;
-			productName = DGChartsDynamic;
-		};
 		C625D99C2CDFBC9E00377F87 /* CropViewController */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C625D99B2CDFBC9E00377F87 /* XCRemoteSwiftPackageReference "TOCropViewController" */;
@@ -880,6 +889,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C6B7CA5C2CC913B800A21DDE /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
+		};
+		C6C3D21B2CF8BB7900E563A2 /* DGCharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C6C3D21A2CF8BB7800E563A2 /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = DGCharts;
 		};
 		C6DA9AF32CE2B4000058C5AF /* GoogleSignIn */ = {
 			isa = XCSwiftPackageProductDependency;

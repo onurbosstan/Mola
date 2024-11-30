@@ -17,7 +17,7 @@ class HomeViewModel {
         "Çarşamba": "Binlerce kilometrelik bir yolculuk bile, tek bir adımla başlar. 🏁",
         "Perşembe": "Gelişimini engelleyen bütün arzularından kurtul ve hedeflerine ilerle. 🌟",
         "Cuma": "Zihnin senin sınırındır. Zihnin, bir şeyi yapabileceğine inandığı sürece başarabilirsin. Kendine %100 inanmalısın. 🎉",
-        "Cumartesi": "Sağlam kafa, sağlam vücutta bulunur! 🛋️",
+        "Cumartesi": "Bugün dinlenme günü! 🛋️",
         "Pazar": "Dünden ders alın, bugün için yaşayın, yarın için umutlu olun. 🌞"
     ]
     

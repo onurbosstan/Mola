@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import FirebaseAuth
+import Firebase
 
 class ProfileViewModel {
     var userData = UserProcesses()
@@ -43,5 +44,28 @@ class ProfileViewModel {
 
     func changeNotePassword(newPassword: String) {
         KeychainManager.savePassword(password: newPassword, forKey: "notesPassword")
+    }
+    func sendFeedback(message: String, completion: @escaping (Bool) -> Void) {
+        guard let user = Auth.auth().currentUser else {
+            print("Kullanıcı oturum açmamış")
+            completion(false)
+            return
+        }
+
+        let feedbackData: [String: Any] = [
+            "userId": user.uid,
+            "email": user.email ?? "Bilinmiyor",
+            "message": message,
+            "timestamp": Timestamp(date: Date())
+        ]
+
+        Firestore.firestore().collection("feedbacks").addDocument(data: feedbackData) { error in
+            if let error = error {
+                print("Geri bildirim gönderilirken hata oluştu: \(error)")
+                completion(false)
+            } else {
+                completion(true)
+            }
+        }
     }
 }

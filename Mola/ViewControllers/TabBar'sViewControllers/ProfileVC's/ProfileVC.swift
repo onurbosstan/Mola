@@ -17,6 +17,7 @@ class ProfileVC: UIViewController {
             (title: "Gizlilik Politikamız", image: "newspaper.fill", bgColor: UIColor(red: 0.1, green: 0.1, blue: 1.0, alpha: 0.5), iconColor: .white),
             (title: "Aylık Not Grafiği", image: "chart.bar.doc.horizontal", bgColor: .systemPurple, iconColor: .white),
             (title: "Not Şifremi Değiştir", image: "key.fill", bgColor: .systemBlue, iconColor: .white),
+            (title: "Geri Bildirim Gönder", image: "paperplane.fill", bgColor: .systemOrange, iconColor: .white),
             (title: "Hesabımı Sil", image: "trash.circle.fill", bgColor: .systemGray3, iconColor: .white),
             (title: "Çıkış Yap", image: "rectangle.portrait.and.arrow.right", bgColor: .red, iconColor: .white)]]
     
@@ -30,6 +31,34 @@ class ProfileVC: UIViewController {
         let okButton = UIAlertAction(title: "OK", style: .default)
         alert.addAction(okButton)
         self.present(alert, animated: true)
+    }
+    private func showFeedbackAlert() {
+        let alert = UIAlertController(title: "Geri Bildirim Gönder", message: "Lütfen geri bildiriminizi yazın.", preferredStyle: .alert)
+        alert.addTextField { textField in
+            textField.placeholder = "Mesajınızı buraya yazın..."
+        }
+
+        let sendAction = UIAlertAction(title: "Gönder", style: .default) { [weak self] _ in
+            guard let self = self else { return }
+            if let message = alert.textFields?.first?.text, !message.isEmpty {
+                self.viewModel.sendFeedback(message: message) { success in
+                    if success {
+                        self.makeAlert(titleInput: "Başarılı", messageInput: "Geri bildiriminiz gönderildi!")
+                    } else {
+                        self.makeAlert(titleInput: "Hata", messageInput: "Geri bildirim gönderilemedi. Lütfen tekrar deneyin.")
+                    }
+                }
+            } else {
+                self.makeAlert(titleInput: "Hata", messageInput: "Mesaj alanı boş bırakılamaz.")
+            }
+        }
+
+        let cancelAction = UIAlertAction(title: "İptal", style: .cancel, handler: nil)
+
+        alert.addAction(sendAction)
+        alert.addAction(cancelAction)
+
+        present(alert, animated: true, completion: nil)
     }
     private func showDeleteAccountAlert() {
            let alert = UIAlertController(title: "Hesabınızı Silin", message: "Lütfen şifrenizi girin", preferredStyle: .alert)
@@ -133,22 +162,24 @@ extension ProfileVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         switch indexPath.row {
-         case 0:
-             self.performSegue(withIdentifier: "toChangeEmail", sender: nil)
-         case 1:
-             self.performSegue(withIdentifier: "toChangePassword", sender: nil)
-         case 2:
-             self.performSegue(withIdentifier: "toPrivacyVC", sender: nil)
-         case 3:
-             self.performSegue(withIdentifier: "toChart", sender: nil)
-         case 4:
-             showChangeNotePasswordAlert()
-         case 5:
-             showDeleteAccountAlert()
-         case 6:
-             viewModel.logOut()
-         default:
-             break
+        case 0:
+            self.performSegue(withIdentifier: "toChangeEmail", sender: nil)
+        case 1:
+            self.performSegue(withIdentifier: "toChangePassword", sender: nil)
+        case 2:
+            self.performSegue(withIdentifier: "toPrivacyVC", sender: nil)
+        case 3:
+            self.performSegue(withIdentifier: "toChart", sender: nil)
+        case 4:
+            showChangeNotePasswordAlert()
+        case 5:
+            showFeedbackAlert()
+        case 6:
+            showDeleteAccountAlert()
+        case 7:
+            viewModel.logOut()
+        default:
+            break
         }
     }
 }

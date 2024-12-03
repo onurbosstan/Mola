@@ -1169,8 +1169,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cjn-wH-eLt">
-                                <rect key="frame" x="0.0" y="44" width="393" height="759"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cjn-wH-eLt">
+                                <rect key="frame" x="0.0" y="129" width="393" height="674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProgressCell" rowHeight="383" id="CMf-Mb-2Zq" customClass="ProgressCell" customModule="Mola" customModuleProvider="target">
@@ -1209,14 +1209,23 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mola" translatesAutoresizingMaskIntoConstraints="NO" id="nSu-j7-gfs">
+                                <rect key="frame" x="16" y="54" width="60" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="xa2-3d-yFU"/>
+                                    <constraint firstAttribute="height" constant="50" id="xlD-sg-TlX"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Mhx-Ys-WbD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="cjn-wH-eLt" firstAttribute="top" secondItem="Mhx-Ys-WbD" secondAttribute="top" id="2L8-xF-n0n"/>
-                            <constraint firstItem="Mhx-Ys-WbD" firstAttribute="bottom" secondItem="cjn-wH-eLt" secondAttribute="bottom" id="ANe-Wl-hSc"/>
-                            <constraint firstItem="cjn-wH-eLt" firstAttribute="leading" secondItem="Mhx-Ys-WbD" secondAttribute="leading" id="NGY-xS-g03"/>
-                            <constraint firstItem="Mhx-Ys-WbD" firstAttribute="trailing" secondItem="cjn-wH-eLt" secondAttribute="trailing" id="VCm-cq-GJl"/>
+                            <constraint firstItem="cjn-wH-eLt" firstAttribute="bottom" secondItem="Mhx-Ys-WbD" secondAttribute="bottom" id="DnE-pW-LCy"/>
+                            <constraint firstItem="cjn-wH-eLt" firstAttribute="trailing" secondItem="Mhx-Ys-WbD" secondAttribute="trailing" id="KnO-aP-er3"/>
+                            <constraint firstItem="nSu-j7-gfs" firstAttribute="top" secondItem="Mhx-Ys-WbD" secondAttribute="top" constant="10" id="WPI-nW-yDO"/>
+                            <constraint firstItem="cjn-wH-eLt" firstAttribute="top" secondItem="nSu-j7-gfs" secondAttribute="bottom" constant="25" id="hao-7g-KOG"/>
+                            <constraint firstItem="nSu-j7-gfs" firstAttribute="leading" secondItem="Mhx-Ys-WbD" secondAttribute="leading" constant="16" id="lmg-OQ-hyp"/>
+                            <constraint firstItem="cjn-wH-eLt" firstAttribute="leading" secondItem="Mhx-Ys-WbD" secondAttribute="leading" id="mHd-uE-LgT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="JT9-6q-SBh"/>

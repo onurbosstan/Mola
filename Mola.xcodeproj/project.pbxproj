@@ -50,6 +50,9 @@
 		C6DA9AF42CE2B4000058C5AF /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = C6DA9AF32CE2B4000058C5AF /* GoogleSignIn */; };
 		C6DA9AF62CE2B4000058C5AF /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C6DA9AF52CE2B4000058C5AF /* GoogleSignInSwift */; };
 		C6E12A282CAEE16D0066FA48 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E12A272CAEE16D0066FA48 /* Users.swift */; };
+		C6E28D232CFF7059003D8B5F /* ProgressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E28D222CFF7059003D8B5F /* ProgressViewModel.swift */; };
+		C6E28D252CFF7271003D8B5F /* ProgressVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E28D242CFF7271003D8B5F /* ProgressVC.swift */; };
+		C6E28D272CFF729C003D8B5F /* ProgressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E28D262CFF729C003D8B5F /* ProgressCell.swift */; };
 		C6F8E66C2CBD93C400D1A7E4 /* NoteDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F8E66B2CBD93C400D1A7E4 /* NoteDetailsVC.swift */; };
 		C6F8E66E2CBD93DF00D1A7E4 /* NoteDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F8E66D2CBD93DF00D1A7E4 /* NoteDetailsViewModel.swift */; };
 		C6F8E6722CBD967B00D1A7E4 /* NotesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F8E6712CBD967B00D1A7E4 /* NotesCell.swift */; };
@@ -112,6 +115,9 @@
 		C6D556382CC46406003BB8B7 /* MemoriesUploadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesUploadVC.swift; sourceTree = "<group>"; };
 		C6DA9AF02CE280F00058C5AF /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C6E12A272CAEE16D0066FA48 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		C6E28D222CFF7059003D8B5F /* ProgressViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewModel.swift; sourceTree = "<group>"; };
+		C6E28D242CFF7271003D8B5F /* ProgressVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressVC.swift; sourceTree = "<group>"; };
+		C6E28D262CFF729C003D8B5F /* ProgressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCell.swift; sourceTree = "<group>"; };
 		C6F8E66B2CBD93C400D1A7E4 /* NoteDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailsVC.swift; sourceTree = "<group>"; };
 		C6F8E66D2CBD93DF00D1A7E4 /* NoteDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailsViewModel.swift; sourceTree = "<group>"; };
 		C6F8E6712CBD967B00D1A7E4 /* NotesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesCell.swift; sourceTree = "<group>"; };
@@ -265,6 +271,7 @@
 				C6FCCC972CB7D4A600C4DEC8 /* ProfileVC.swift */,
 				C6B494AE2CBA7F47004ADF01 /* ChangePasswordVC.swift */,
 				C6B494B22CBAA2E1004ADF01 /* ChangeEmailVC.swift */,
+				C6E28D242CFF7271003D8B5F /* ProgressVC.swift */,
 				C6BE87B52CF8A8DF00AFC8B9 /* MonthlyNotesChartVC.swift */,
 				C6746EBB2CCABF6600A6B751 /* PrivacyVC.swift */,
 			);
@@ -301,6 +308,7 @@
 				C6FCCCA52CB7D54000C4DEC8 /* ProfileViewModel.swift */,
 				C6B494B02CBA7F54004ADF01 /* ChangePasswordViewModel.swift */,
 				C6B494B42CBAA2FA004ADF01 /* ChangeEmailViewModel.swift */,
+				C6E28D222CFF7059003D8B5F /* ProgressViewModel.swift */,
 				C6BE87B92CF8B57800AFC8B9 /* MonthlyNotesChartViewModel.swift */,
 				C6746EBD2CCABF7700A6B751 /* PrivacyViewModel.swift */,
 			);
@@ -379,6 +387,7 @@
 			isa = PBXGroup;
 			children = (
 				C6CEABA42CB92DCC008B4B06 /* ProfileCell.swift */,
+				C6E28D262CFF729C003D8B5F /* ProgressCell.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -534,6 +543,8 @@
 				C6F8E66E2CBD93DF00D1A7E4 /* NoteDetailsViewModel.swift in Sources */,
 				C6FCCC982CB7D4A600C4DEC8 /* ProfileVC.swift in Sources */,
 				C6FCCCA22CB7D52900C4DEC8 /* HomeViewModel.swift in Sources */,
+				C6E28D232CFF7059003D8B5F /* ProgressViewModel.swift in Sources */,
+				C6E28D272CFF729C003D8B5F /* ProgressCell.swift in Sources */,
 				C6FCCC942CB7D41200C4DEC8 /* HomeVC.swift in Sources */,
 				C6168A962CC45D0C006A9C60 /* MemoriesCell.swift in Sources */,
 				C6B494AF2CBA7F47004ADF01 /* ChangePasswordVC.swift in Sources */,
@@ -565,6 +576,7 @@
 				C6BE87BA2CF8B57800AFC8B9 /* MonthlyNotesChartViewModel.swift in Sources */,
 				C684DDDA2CAEE0060053B291 /* RegisterVC.swift in Sources */,
 				C65D9F3B2CB4550C007A6580 /* RegisterViewModel.swift in Sources */,
+				C6E28D252CFF7271003D8B5F /* ProgressVC.swift in Sources */,
 				C6FCCC962CB7D49C00C4DEC8 /* NotesVC.swift in Sources */,
 				C6B494B32CBAA2E1004ADF01 /* ChangeEmailVC.swift in Sources */,
 				C6BE87B62CF8A8DF00AFC8B9 /* MonthlyNotesChartVC.swift in Sources */,

@@ -18,6 +18,7 @@ class ProfileVC: UIViewController {
             (title: "Aylık Not Grafiği", image: "chart.bar.doc.horizontal", bgColor: .systemPurple, iconColor: .white),
             (title: "Not Şifremi Değiştir", image: "key.fill", bgColor: .systemBlue, iconColor: .white),
             (title: "Geri Bildirim Gönder", image: "paperplane.fill", bgColor: .systemOrange, iconColor: .white),
+            (title: "İlerleme Takibi", image: "chart.line.uptrend.xyaxis", bgColor: .systemTeal, iconColor: .white),
             (title: "Hesabımı Sil", image: "trash.circle.fill", bgColor: .systemGray3, iconColor: .white),
             (title: "Çıkış Yap", image: "rectangle.portrait.and.arrow.right", bgColor: .red, iconColor: .white)]]
     
@@ -175,8 +176,10 @@ extension ProfileVC: UITableViewDataSource, UITableViewDelegate {
         case 5:
             showFeedbackAlert()
         case 6:
-            showDeleteAccountAlert()
+            self.performSegue(withIdentifier: "toProgressVC", sender: nil)
         case 7:
+            showDeleteAccountAlert()
+        case 8:
             viewModel.logOut()
         default:
             break

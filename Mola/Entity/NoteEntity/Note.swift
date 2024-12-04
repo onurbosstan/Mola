@@ -12,4 +12,5 @@ struct Note {
     let content: String
     let date: Date
     var isPinned: Bool
+    var reminderDate: Date?
 }

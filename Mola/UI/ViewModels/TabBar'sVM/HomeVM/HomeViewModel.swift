@@ -18,7 +18,7 @@ class HomeViewModel {
         "Perşembe": "Gelişimini engelleyen bütün arzularından kurtul ve hedeflerine ilerle. 🌟",
         "Cuma": "Başarı, her gün tekrar edilen disiplinli eylemlerin sonucudur. 🎉",
         "Cumartesi": "Bugün dinlenme günü! 🛋️",
-        "Pazar": "Dünden ders alın, bugün için yaşayın, yarın için umutlu olun. 🌞"
+        "Pazar": "Zaferin coşkusunu hissedebilmeniz için zorlukları kabul edin. 🌞"
     ]
     
     func getMotivationMessage() -> String {

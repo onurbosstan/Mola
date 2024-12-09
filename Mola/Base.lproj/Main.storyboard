@@ -394,7 +394,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IPC-32-ChM">
                                 <rect key="frame" x="16" y="43.666666666666664" width="49" height="34.999999999999993"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="bell" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="plain" image="bell.badge" catalog="system"/>
                                 <connections>
                                     <action selector="reminderSaveButtonTapped:" destination="V3m-IY-JgY" eventType="touchUpInside" id="XxH-XO-Dkb"/>
                                 </connections>
@@ -1241,7 +1241,7 @@
     </scenes>
     <resources>
         <image name="addmemo" width="256" height="256"/>
-        <image name="bell" catalog="system" width="125" height="128"/>
+        <image name="bell.badge" catalog="system" width="117" height="128"/>
         <image name="calendar" catalog="system" width="128" height="107"/>
         <image name="camera.shutter.button" catalog="system" width="128" height="108"/>
         <image name="eye.slash" catalog="system" width="128" height="97"/>

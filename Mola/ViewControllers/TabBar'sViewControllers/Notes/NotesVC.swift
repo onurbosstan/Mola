@@ -148,7 +148,43 @@ class NotesVC: UIViewController, UISearchBarDelegate {
     @IBAction func addButton(_ sender: Any) {
         self.tabBarController?.selectedIndex = 2
     }
-    
+    @IBAction func reminderSaveButtonTapped(_ sender: Any) {
+        let alert = UIAlertController(
+            title: "Hatırlatıcı Ayarla",
+            message: "Hatırlatma için bir tarih ve saat seçin.",
+            preferredStyle: .alert
+        )
+
+        let datePicker = UIDatePicker()
+        datePicker.datePickerMode = .dateAndTime
+        datePicker.preferredDatePickerStyle = .compact
+        alert.view.addSubview(datePicker)
+
+        datePicker.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            datePicker.centerXAnchor.constraint(equalTo: alert.view.centerXAnchor),
+            datePicker.topAnchor.constraint(equalTo: alert.view.topAnchor, constant: 80),
+            datePicker.bottomAnchor.constraint(equalTo: alert.view.bottomAnchor, constant: -100) // Butonlarla boşluk bırak
+        ])
+
+        alert.view.translatesAutoresizingMaskIntoConstraints = false
+        alert.view.heightAnchor.constraint(equalToConstant: 210).isActive = true
+
+        alert.addAction(UIAlertAction(title: "İptal", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Kaydet", style: .default, handler: { [weak self] _ in
+            guard let self = self else { return }
+            let selectedDate = datePicker.date
+
+            self.viewModel.saveNoteWithReminder(content: "Hatırlatıcı İçeriği", reminderDate: selectedDate) { success in
+                if success {
+                    print("Hatırlatıcı başarıyla kaydedildi.")
+                } else {
+                    print("Hatırlatıcı kaydedilirken bir hata oluştu.")
+                }
+            }
+        }))
+        present(alert, animated: true, completion: nil)
+    }
 }
 extension NotesVC: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {

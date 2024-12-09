@@ -8,6 +8,7 @@
 import Foundation
 import FirebaseFirestore
 import FirebaseAuth
+import UserNotifications
 
 class NotesViewModel {
     let db = Firestore.firestore()
@@ -49,11 +50,58 @@ class NotesViewModel {
                         let date = (data["date"] as? Timestamp)?.dateValue() ?? Date()
                         let id = doc.documentID
                         let isPinned = data["isPinned"] as? Bool ?? false
-                        return Note(id: id, content: content, date: date, isPinned: isPinned)
+                        let reminderDate = (data["reminderDate"] as? Timestamp)?.dateValue()
+                        return Note(id: id, content: content, date: date, isPinned: isPinned, reminderDate: reminderDate)
                     } ?? []
                     completion()
                 }
             }
+    }
+    func saveNoteWithReminder(content: String, reminderDate: Date?, completion: @escaping (Bool) -> Void) {
+        guard let user = Auth.auth().currentUser else {
+            print("User not authenticated")
+            completion(false)
+            return
+        }
+
+        var noteData: [String: Any] = [
+            "content": content,
+            "date": Timestamp(date: Date()),
+            "userId": user.uid
+        ]
+
+        if let reminderDate = reminderDate {
+            noteData["reminderDate"] = Timestamp(date: reminderDate)
+        }
+
+        db.collection("notes").addDocument(data: noteData) { error in
+            if let error = error {
+                print("Error saving note: \(error)")
+                completion(false)
+            } else {
+                if let reminderDate = reminderDate {
+                    self.scheduleReminder(content: content, date: reminderDate)
+                }
+                completion(true)
+            }
+        }
+    }
+
+    func scheduleReminder(content: String, date: Date) {
+        let notificationCenter = UNUserNotificationCenter.current()
+        let notificationContent = UNMutableNotificationContent()
+        notificationContent.title = "Not Hatırlatıcı"
+        notificationContent.body = content
+        notificationContent.sound = .default
+
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: date.timeIntervalSinceNow, repeats: false)
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: notificationContent, trigger: trigger)
+
+        notificationCenter.add(request) { error in
+            if let error = error {
+                print("Error scheduling reminder: \(error)")
+            }
+        }
     }
     func deleteNote(note: Note, completion: @escaping (Bool) -> Void) {
         db.collection("notes").document(note.id).delete { error in

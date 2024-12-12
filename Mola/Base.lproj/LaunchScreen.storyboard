@@ -29,7 +29,7 @@
                                     <constraint firstAttribute="width" constant="329" id="R1Z-Sq-MfA"/>
                                     <constraint firstAttribute="height" constant="47" id="k8q-Sd-ohC"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="19"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>

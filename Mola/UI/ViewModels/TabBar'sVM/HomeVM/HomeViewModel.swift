@@ -12,13 +12,13 @@ class HomeViewModel {
     let db = Firestore.firestore()
     
     private let dailyMessages: [String: String] = [
-        "Pazartesi": "Sizi gerçekten motive edebilen tek kişi kendinizdir. 🚀",
-        "Salı": "Bugün içinde bulunduğunuz mücadele, yarın ihtiyacınız olan gücü geliştiriyor. 💪",
-        "Çarşamba": "Binlerce kilometrelik bir yolculuk bile, tek bir adımla başlar. 🏁",
-        "Perşembe": "Gelişimini engelleyen bütün arzularından kurtul ve hedeflerine ilerle. 🌟",
-        "Cuma": "Konu işlerin yürütülmesine gelince, motivasyon her şeydir. 🎉",
+        "Pazartesi": "Deneyecek olanlar için imkansız diye bir şey yoktur! 🚀",
+        "Salı": "Kendi hayatını sen belirliyorsun. Başkalarının senaryonu yazmasına izin verme.  💪",
+        "Çarşamba": "Bir şey için çok geç olduğunu düşünsen dahi aslında hala erkendir. 🏁",
+        "Perşembe": "Bugün yürümezsen yarın koşmak zorunda kalacaksın. 🌟",
+        "Cuma": "Hayal edebildiğiniz her şey, gerçektir. 🎉",
         "Cumartesi": "Bugün dinlenme günü! 🛋️",
-        "Pazar": "Zaferin coşkusunu hissedebilmeniz için zorlukları kabul edin. 🌞"
+        "Pazar": "Bütün başarıların başlangıç noktası arzulamaktır. Zayıf arzular, zayıf sonuçlar getirir.  🌞"
     ]
     
     func getMotivationMessage() -> String {
